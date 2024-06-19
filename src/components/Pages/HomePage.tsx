@@ -3,7 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { SecondPage } from "./SecondPage";
-import { FirstPage } from "./FirstPage";
+import  FirstPage  from "./FirstPage";
 import { ThirdPage } from "./ThirdPage";
 
 

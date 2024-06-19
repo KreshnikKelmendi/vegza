@@ -1,20 +1,21 @@
 import React from 'react';
 import Header from '../Header/Header';
+import video1 from '../assets/video1.mp4';  // Adjust path as necessary
 
-export const FirstPage = () => {
+const FirstPage: React.FC = () => {
+  
   return (
     <div className='relative'>
       <video
-        src={require('../assets/video1.mp4')}
+        src={video1}
         autoPlay
         loop
+        muted
         playsInline
-        
         className='w-3/4'
       />
 
       <div className='absolute top-0'>
-       
         <div className='flex flex-col lg:flex-row lg:px-[144px] lg:justify-between 2xl:items-center h-screen'>
           <p className='text-white lg:mt-24 2xl:mt-0 text-left lg:text-[70px] 2xl:text-[100px] lg:leading-[70px] 2xl:leading-[125.3px] font-bold 2xl:w-[1065px] font-custom'>
             VEGZA IS A DIFFERENT KIND OF ARCHITECTURE PRACTICE
