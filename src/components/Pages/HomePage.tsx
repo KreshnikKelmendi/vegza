@@ -5,6 +5,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { SecondPage } from "./SecondPage";
 import  FirstPage  from "./FirstPage";
 import { ThirdPage } from "./ThirdPage";
+import { FourthPage } from "./FourthPage";
+import { Services } from "./Services";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -48,25 +50,24 @@ const HomePage: React.FC = () => {
 
         <div className="panel bg-black"><SecondPage /></div>
         <div className="panel orange"><ThirdPage /></div>
-        <div className="panel purple">THREE</div>
+        <div className="panel purple"><FourthPage /></div>
+        <div className="panel purple"><Services /></div>
       </div>
     </div>
 
     <div className="lg:hidden">
       <div className="flex flex-col lg:flex-row">
-        <div className="description bg-black">
+        <div className=" bg-black">
           {/* <div className="description panel bg-black"> */}
             <div>
               <FirstPage />
-              <div className="scroll-down">
-                <div className="arrow"></div>
-              </div>
+             
             </div>
         </div>
 
         <div className="bg-black"><SecondPage /></div>
-        <div className="panel orange">TWO</div>
-        <div className="panel purple">THREE</div>
+        <div className=" orange"><ThirdPage /></div>
+        <div className="purple"><FourthPage /></div>
       </div>
     </div>
 
