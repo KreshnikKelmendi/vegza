@@ -116,8 +116,8 @@ export const FourthPage = () => {
         className='lg:w-1/2 bg-white lg:h-screen px-4 lg:px-0 lg:pl-16 flex flex-col items-start justify-center'
       >
         <div ref={textContainerRef} className='py-5 lg:py-0'>
-          <p ref={headingRef} className='text-[40px]'>Projects</p>
-          <p ref={paragraphRef} className='text-[#050505] mt-6 font-custom text-[18px] lg:w-[88%] 2xl:w-[649px] lg:h-[144px] text-justify tracking-tighter leading-[23.99px]'>
+          <p ref={headingRef} className='text-[40px] font-light'>Projects</p>
+          <p ref={paragraphRef} className='text-[#050505] mt-6 font-custom text-[18px] lg:w-[88%] 2xl:w-[649px] lg:h-fit text-justify tracking-tighter leading-[23.99px]'>
             Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, ne jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni 
             demokratik që vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, Hong Kong dhe Sidnei që ofrojnë shërbime arkitekture, 
             dizajni të brendshëm dhe urban nga koncepti deri në përfundim.

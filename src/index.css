@@ -27,8 +27,8 @@ body {
 .container-vegza {
   width: 600vw;
   height: 100vh;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
+  display: flex; 
+  flex-wrap: wrap;
 }
 
 .firstContainer {
@@ -82,3 +82,21 @@ body {
   -webkit-mask-image: linear-gradient(to left, transparent 10%, black 100%);
   mask-image: linear-gradient(to left, transparent 10%, black 100%);
 } */
+
+.vertical-text {
+  writing-mode: horizontal-tb; /* Default horizontal text */
+  transform: none; /* Reset rotation */
+
+  @media (min-width: 1024px) { /* Adjust the minimum width as needed */
+    writing-mode: vertical-rl; /* Vertical text for large devices */
+    transform: rotate(180deg); /* Rotate 180 degrees */
+  }
+}
+
+.bg-layer{
+  background-image: url(../src//components/assets/Layer_1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  
+}

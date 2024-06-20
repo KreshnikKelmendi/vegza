@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from '../Header/Header';
-import video1 from '../assets/video1.mp4';  // Adjust path as necessary
+import video1 from '../assets/video1.mp4';
 
 const FirstPage: React.FC = () => {
   
