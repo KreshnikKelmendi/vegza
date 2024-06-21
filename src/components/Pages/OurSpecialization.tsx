@@ -38,59 +38,38 @@ const OurSpecialization: React.FC = () => {
     triggerOnce: true,
   });
 
-  const textRef = useRef<HTMLParagraphElement>(null);
-  const specialtiesRef = useRef<HTMLDivElement[]>([]);
+  const specialtiesRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     if (inView) {
       gsap.fromTo(
-        textRef.current,
-        { x: -200, autoAlpha: 0 },
-        {
-          x: 0,
-          autoAlpha: 1,
-          duration: 1,
-          ease: 'power3.out',
-          onComplete: () => {
-            gsap.to(textRef.current, {
-              x: '+=10',
-              duration: 0.1,
-              yoyo: true,
-              repeat: 5,
-              ease: 'power1.inOut',
-            });
-          },
-        }
-      );
-
-      gsap.fromTo(
-        specialtiesRef.current,
+        specialtiesRef.current.filter(el => el !== null), // Filter out null elements
         { autoAlpha: 0, y: 100 },
         {
           duration: 1,
           autoAlpha: 1,
           y: 0,
-          stagger: 0.8,
+          stagger: 0.3, // Adjust the stagger delay as per your preference
           ease: 'power3.out',
+          onComplete: () => {
+            // Optional: Add any additional onComplete logic if needed
+          }
         }
       );
     }
   }, [inView]);
 
   return (
-    <div className='w-full flex flex-col lg:flex-row lg:items-center bg-layer lg:h-screen bg-[#0E0E0E] relative'>
-      <p
-        ref={textRef}
-        className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 lg:text-[78px] font-custom text-[#D9D9D9] lg:leading-[73.45px] lg:absolute lg:left-[-60px]'
-      >
+    <div className='w-full flex flex-col lg:flex-row lg:items-center bg-layer lg:h-screen bg-[#0E0E0E] relative pb-5 lg:pb-0'>
+      <p className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 lg:text-[78px] font-custom text-[#D9D9D9] lg:leading-[73.45px] lg:absolute lg:left-[-60px]'>
         Our <br /> Specialization
       </p>
-      <div ref={ref} className='grid lg:grid-cols-3 gap-10 lg:gap-24 lg:ml-32'>
+      <div ref={ref} className='grid lg:grid-cols-3 gap-10 lg:gap-24 lg:ml-32 lg:px-24'>
         {specialties.map((specialty, index) => (
           <div
             key={specialty.id}
-            ref={(el) => specialtiesRef.current[index] = el as HTMLDivElement}
-            className='text-white font-custom '
+            ref={(el) => specialtiesRef.current[index] = el}
+            className='text-white font-custom'
           >
             <img
               src={specialty.image}

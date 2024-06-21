@@ -9,6 +9,8 @@ import { FourthPage } from "./FourthPage";
 import { Services } from "./Services";
 import OurSpecialization from "./OurSpecialization";
 import Interior from "./Interior";
+import VegzaViz from "./VegzaViz";
+import Contact from "./Contact";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -51,11 +53,13 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="panel bg-black"><SecondPage /></div>
-        <div className="panel orange"><ThirdPage /></div>
-        <div className="panel purple"><FourthPage /></div>
-        <div className="panel purple"><Services /></div>
+        <div className="panel "><ThirdPage /></div>
+        <div className="panel"><FourthPage /></div>
+        <div className="panel "><Services /></div>
         <div className="panel bg-[#0E0E0E]"><OurSpecialization /></div>
         <div className="panel bg-[#0E0E0E]"><Interior /></div>
+        <div className="panel bg-[#0E0E0E]"><VegzaViz /></div>
+        <div className="panel bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>
 
@@ -70,10 +74,13 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="bg-black"><SecondPage /></div>
-        <div className=" orange"><ThirdPage /></div>
-        <div className="purple"><FourthPage /></div>
+        <div className=""><ThirdPage /></div>
+        <div className=""><FourthPage /></div>
         <div className="bg-white"><Services /></div>
         <div className="bg-[#0E0E0E]"><OurSpecialization /></div>
+        <div className="bg-[#0E0E0E]"><Interior /></div>
+        <div className="bg-[#0E0E0E]"><VegzaViz /></div>
+        <div className="bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>
 
