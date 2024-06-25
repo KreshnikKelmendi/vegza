@@ -3,6 +3,7 @@ import image12 from "../assets/vegza-8.png"
 import SplitType from 'split-type'
 import gsap from 'gsap'
 import { useInView } from 'react-intersection-observer'
+import { Link } from 'react-router-dom'
 
 const VegzaViz = () => {
     const { ref, inView } = useInView({
@@ -37,12 +38,14 @@ const VegzaViz = () => {
                     <path d="M468.255 894.938C455.623 915.805 434.452 929.717 410.622 932.859C374.49 937.619 339.822 916.812 326.294 882.277L311.842 845.331L309.214 838.559C296.523 805.854 263.735 786.115 229.574 790.63C195.502 795.115 165.522 774.248 150.024 742.946C143.216 729.187 110.189 655.174 77.3119 562.43C35.8347 445.461 -56.2571 358.391 51.0042 320.469C173.495 277.148 1.70341 139.068 25.0847 87.0212C74.2064 -22.32 425.941 -31.3504 576.949 82.5975C676.835 157.953 777.288 12.5203 904.526 44.6148C1031.76 76.7094 1027.64 668.842 930.088 744.807C849.462 807.562 769.166 657.828 657.634 705.97C592.895 733.916 468.255 894.968 468.255 894.968V894.938Z" stroke="#A8FF00" stroke-opacity="0.42" stroke-width="1.15" stroke-miterlimit="10"/>
                 </svg>
                 
-            <p ref={ref} className='mt-16 font-custom text-[16px] lg:w-[88%] 2xl:w-[563px] lg:h-fit text-justify tracking-tighter leading-[23.99px]'>
+            <p ref={ref} className='mt-16 font-custom text-[16px] lg:w-[88%] 2xl:w-[563px] lg:h-fit text-justify leading-[21.33px] font-light'>
                 Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, ne jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni demokratik që vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, Hong Kong dhe Sidnei që ofrojnë shërbime arkitekture, dizajni të brendshëm dhe urban nga koncepti deri në përfundim.
             </p>
-            <button className='w-[204px] h-[42px] text-[#A8FF00] border font-custom border-[#A8FF00] hover:bg-[#A8FF00] hover:text-black hover:duration-300 mt-16 text-base font-semibold'>
-                See More
-            </button>
+            <Link to="/vegza-viz">
+              <button className='w-[204px] h-[42px] text-[#A8FF00] border font-custom border-[#A8FF00] hover:bg-[#A8FF00] hover:text-black hover:duration-300 mt-16 text-base font-semibold'>
+                  See More
+              </button>
+            </Link>
         </div>
         <div className='lg:w-1/2'>
             <img src={image12} alt='' className='w-full firstServiceImage' />

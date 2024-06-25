@@ -47,7 +47,7 @@ export const ThirdPage = () => {
       </div>    
       <div className='lg:w-1/2 px-5 py-5 lg:px-0 w-fit bg-white lg:h-screen lg:pl-16 flex flex-col lg:items-start lg:justify-center' ref={textRefInView}>
         <p className='text-[40px]' ref={textRef}>About Us</p>
-        <p className='text-[#050505] mt-6 font-custom text-base lg:text-[18px] lg:w-[88%] 2xl:w-[649px] lg:h-[144px] text-justify tracking-tighter leading-[23.99px]'>
+        <p className='text-[#050505] mt-6 font-custom text-base lg:text-[18px] lg:w-[88%] 2xl:w-[649px] lg:h-[144px] text-justify leading-[23.99px]'>
           Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, ne jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni demokratik që vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, Hong Kong dhe Sidnei që ofrojnë shërbime arkitekture, dizajni të brendshëm dhe urban nga koncepti deri në përfundim.
         </p>
         <button className='w-[204px] h-[42px] text-black border font-custom border-black hover:bg-white hover:text-black hover:duration-300 mt-6 text-base font-semibold' ref={buttonRefInView}>

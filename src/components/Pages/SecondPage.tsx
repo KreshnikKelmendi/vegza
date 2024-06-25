@@ -29,7 +29,7 @@ export const SecondPage = () => {
         <img src={vegza1} alt='' className='firstServiceImage w-full lg:w-[3000px] h-80 lg:h-screen object-cover' />
       </div>    
       <div className='bg-white py-10 lg:h-screen w-full relative'>
-        <p ref={ref} className='text-black hidden font-medium lg:block text-left font-custom text-2xl lg:text-[108px] absolute lg:right-0 lg:w-[1056px] lg:h-[594px] lg:leading-[110px]' id='my-text'>
+        <p ref={ref} className='text-black hidden font-normal lg:block text-left font-custom text-2xl lg:text-[108px] absolute lg:right-0 lg:w-[1056px] lg:h-[594px] lg:leading-[110px]' id='my-text'>
           The distinctive,<br />personal <br />&cultivated,<br />coalesce in a Vegza designed space
         </p>
         <p className='text-black lg:hidden text-center font-custom text-2xl lg:text-[108px] lg:w-[1056px] lg:h-[594px] lg:leading-[110px]'>

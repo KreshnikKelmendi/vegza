@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const hamburgerIcon = (
   <svg
@@ -104,7 +104,7 @@ const Header: React.FC = () => {
               Home
             </Link>
             <Link
-              to="/about"
+              to="/about-us"
               onClick={closeMenu}
               className="text-[#DF319A] text-[16px] flex items-center justify-center py-[18px]"
             >
@@ -124,47 +124,47 @@ const Header: React.FC = () => {
             >
               Services
             </Link>
-            <Link
-              to="/contacts"
+            <NavLink
+              to="/contact"
               onClick={closeMenu}
               className="text-[#DF319A] text-[16px] flex items-center justify-center py-[18px]"
             >
-              Contacts
-            </Link>
+              Contact
+            </NavLink>
           </nav>
         </div>
 
         <div className="hidden md:flex space-x-16">
-          <Link
+          <NavLink
             to="/"
             className="text-white text-[16px] flex items-center justify-center"
           >
             Home
-          </Link>
-          <Link
-            to="/about"
+          </NavLink>
+          <NavLink
+            to="/about-us"
             className="text-white text-[16px] flex items-center justify-center"
           >
             About Us
-          </Link>
-          <Link
-            to="/articles"
+          </NavLink>
+          <NavLink
+            to="/projects"
             className="text-white text-[16px] flex items-center justify-center"
           >
             Projects
-          </Link>
+          </NavLink>
           <Link
             to="/info2"
             className="text-white text-[16px] flex items-center justify-center"
           >
             Services
           </Link>
-          <Link
-            to="/contacts"
+          <NavLink
+            to="/contact"
             className=" text-white text-[16px] flex items-center justify-center"
           >
             Contact
-          </Link>
+          </NavLink>
         </div>
       </header>
     </>

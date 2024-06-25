@@ -52,7 +52,7 @@ const HomePage: React.FC = () => {
             </div>
         </div>
 
-        <div className="panel bg-black"><SecondPage /></div>
+        <div className="panel bg-[#0E0E0E]"><SecondPage /></div>
         <div className="panel "><ThirdPage /></div>
         <div className="panel"><FourthPage /></div>
         <div className="panel "><Services /></div>

@@ -80,7 +80,7 @@ const OurSpecialization: React.FC = () => {
               <p className='2xl:mt-12 mt-4 text-2xl 2xl:text-[40px] uppercase font-light leading-[37.66px]'>
                 {specialty.title}
               </p>
-              <p className='2xl:mt-12 mt-4 text-sm 2xl:text-base text-justify tracking-tighter leading-[21.33px] font-light'>
+              <p className='2xl:mt-12 mt-4 text-sm 2xl:text-base text-justify lg:text-base font-custom leading-[21.33px] font-light'>
                 {specialty.description}
               </p>
             </div>

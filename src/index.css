@@ -134,3 +134,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: white; 
 }
+
+.active{
+  color: #A8FF00;
+  font-weight: 900;
+}
