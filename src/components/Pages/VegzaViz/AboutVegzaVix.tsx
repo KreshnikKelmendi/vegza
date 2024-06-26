@@ -46,13 +46,13 @@ const AboutVegzaViz = () => {
       <p
         id='my-text'
         ref={textRef}
-        className='text-[128px] font-custom lg:mt-[-120px] text-[#A8FF00]'
+        className='lg:text-[70px] 2xl:text-[128px] font-custom lg:mt-[-120px] text-[#A8FF00]'
       >
         Vegza Viz
       </p>
       <div className='flex mt-10 text-[16px] font-custom font-light leading-[21.33px]'>
         <p
-          className='w-[476px]'
+          className='w-[476px] text-justify'
           ref={(el) => (paragraphRefs.current[0] = el)}
         >
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
@@ -63,7 +63,7 @@ const AboutVegzaViz = () => {
           nisl ut aliquip ex ea commodo consequat.
         </p>
         <p
-          className='w-[476px] mx-16'
+          className='w-[476px] mx-16 text-justify'
           ref={(el) => (paragraphRefs.current[1] = el)}
         >
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 

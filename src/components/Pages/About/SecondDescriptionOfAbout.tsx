@@ -38,7 +38,7 @@ const SecondDescriptionOfAbout = () => {
       <p
         id='my-text'
         ref={ref}
-        className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 lg:text-[128px] font-custom text-[#D9D9D9] lg:leading-[73.45px] lg:absolute lg:left-[-20px]'
+        className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 2xl:text-[128px] font-custom text-[#D9D9D9] lg:leading-[73.45px] lg:text-[78px] lg:absolute lg:left-[-20px]'
       >
         Our Offices
       </p>

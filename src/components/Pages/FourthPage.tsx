@@ -92,7 +92,7 @@ export const FourthPage = () => {
   return (
     <div className='w-full flex flex-col lg:flex-row'>
       <div className='bg-white lg:h-screen w-full lg:w-3/4 relative'>
-        <div ref={cardsRef} className='grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-4'>
+        <div ref={cardsRef} className='grid grid-cols-3 gap-x-1 lg:gap-x-4 gap-y-4'>
           {cardsData.map((card, index) => (
             <div
               key={index}
@@ -113,16 +113,16 @@ export const FourthPage = () => {
       </div>
       <div
         ref={textRef}
-        className='lg:w-1/2 bg-white lg:h-screen px-4 lg:px-0 lg:pl-16 flex flex-col items-start justify-center'
+        className='lg:w-1/2 bg-white lg:h-screen px-5 lg:px-0 lg:pl-16 flex flex-col items-start justify-center'
       >
         <div ref={textContainerRef} className='py-5 lg:py-0'>
-          <p ref={headingRef} className='text-[40px] font-light'>Projects</p>
-          <p ref={paragraphRef} className='text-[#050505] lg:pr-7 mt-6 font-custom text-[18px] lg:w-[88%] 2xl:w-[649px] lg:h-fit text-justify leading-[23.99px]'>
+          <p ref={headingRef} className='text-3xl font-custom lg:text-[40px] font-light'>Projects</p>
+          <p ref={paragraphRef} className='text-[#050505] mt-6 lg:mt-8 font-custom text-sm lg:tracking-normal lg:text-[18px] lg:w-[88%] 2xl:w-[649px] lg:h-fit text-justify leading-[23.99px]'>
             Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, ne jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni 
             demokratik që vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, Hong Kong dhe Sidnei që ofrojnë shërbime arkitekture, 
             dizajni të brendshëm dhe urban nga koncepti deri në përfundim.
           </p>
-          <button ref={buttonRef} className='w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 text-base font-semibold'>
+          <button ref={buttonRef} className='w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 text-sm lg:text-base font-semibold'>
             See More Projects
           </button>
         </div>

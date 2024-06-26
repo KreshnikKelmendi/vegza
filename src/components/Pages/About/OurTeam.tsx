@@ -29,7 +29,7 @@ const OurTeam = () => {
       <div className='flex items-center h-screen font-custom'>
         <p
           id='my-text'
-          className='vertical-text text-4xl px-10 2xl:px-24 py-10 font-light lg:py-0 lg:text-[128px] font-custom text-black lg:leading-[73.45px]'
+          className='vertical-text text-4xl px-10 2xl:px-24 py-10 font-light lg:py-0 lg:text-[78px] 2xl:text-[128px] font-custom text-black lg:leading-[73.45px]'
         >
           Our Team
         </p>

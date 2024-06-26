@@ -6,6 +6,7 @@ import AboutUsPage from './components/Pages/About/AboutUsPage';
 import VegzaPage from './components/Pages/VegzaViz/VegzaPage';
 import ContactPage from './components/Pages/Contact/ContactPage';
 import ProjectsPage from './components/Pages/Project/ProjectsPage';
+import ScrollToTop from './components/Pages/Contact/ScrollToTop';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
+          <ScrollToTop />
         </BrowserRouter>    
     </>
   );

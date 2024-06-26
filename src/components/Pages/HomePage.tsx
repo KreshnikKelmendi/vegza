@@ -57,8 +57,8 @@ const HomePage: React.FC = () => {
         <div className="panel"><FourthPage /></div>
         <div className="panel "><Services /></div>
         <div className="panel bg-[#0E0E0E]"><OurSpecialization /></div>
-        <div className="panel bg-[#0E0E0E]"><Interior /></div>
-        <div className="panel bg-[#0E0E0E]"><VegzaViz /></div>
+        {/* <div className="panel bg-[#0E0E0E]"><Interior /></div> */}
+        {/* <div className="panel bg-[#0E0E0E]"><VegzaViz /></div> */}
         <div className="panel bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>
@@ -78,8 +78,8 @@ const HomePage: React.FC = () => {
         <div className=""><FourthPage /></div>
         <div className="bg-white"><Services /></div>
         <div className="bg-[#0E0E0E]"><OurSpecialization /></div>
-        <div className="bg-[#0E0E0E]"><Interior /></div>
-        <div className="bg-[#0E0E0E]"><VegzaViz /></div>
+        {/* <div className="bg-[#0E0E0E]"><Interior /></div> */}
+        {/* <div className="bg-[#0E0E0E]"><VegzaViz /></div> */}
         <div className="bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>

@@ -41,7 +41,9 @@ const SecondDescriptionOfProjects = () => {
           <div className='absolute lg:h-[229px] 2xl:h-[319px] flex flex-col justify-center px-16 bottom-0 w-full bg-gradient-to-t from-[#0a0a0a] to-[#1011110e]'>
             <p className='text-white text-[40px] font-custom font-semibold'>Dark Store</p>
             <p className='text-white text-[20px]'>Interior</p>
-            <p className='border border-white'>See More</p>
+            <button className='w-[136px] h-[42px] font-light text-base font-custom text-white border border-white hover:bg-white hover:text-black hover:duration-300 lg:mt-6 mt-12'>
+                <p>See More</p>
+            </button>
           </div>
         </div>
       </div>

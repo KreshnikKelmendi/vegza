@@ -32,7 +32,7 @@ export const SecondPage = () => {
         <p ref={ref} className='text-black hidden font-normal lg:block text-left font-custom text-2xl lg:text-[108px] absolute lg:right-0 lg:w-[1056px] lg:h-[594px] lg:leading-[110px]' id='my-text'>
           The distinctive,<br />personal <br />&cultivated,<br />coalesce in a Vegza designed space
         </p>
-        <p className='text-black lg:hidden text-center font-custom text-2xl lg:text-[108px] lg:w-[1056px] lg:h-[594px] lg:leading-[110px]'>
+        <p className='text-black lg:hidden text-center font-custom text-3xl lg:text-[108px] lg:w-[1056px] lg:h-[594px] lg:leading-[110px]'>
           Lorem ipsum dolor sit amet consectour, adis apistamet
         </p>
       </div>

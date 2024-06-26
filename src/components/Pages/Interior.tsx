@@ -43,7 +43,7 @@ const Interior = () => {
   }, [inView2]);
 
   return (
-    <div className='bg-white h-screen'>
+    <div className='bg-white lg:h-screen'>
       <div ref={ref1} className='lg:h-[50vh] w-full flex flex-col lg:flex-row mx-auto text-left'>
         <div className='px-4 lg:px-0 my-10 lg:my-0 flex flex-col 2xl:mx-48 lg:mx-16 text-left justify-center' ref={textRef1}>
           <p className='text-[40px] font-custom uppercase'>Architecture</p>

@@ -17,6 +17,7 @@ body {
   overflow-y: visible;
   position: relative;
   overflow-x: hidden;
+  background-color: #0E0E0E;
 }
 html,
 body {
@@ -79,7 +80,6 @@ body {
   mask-image: linear-gradient(to right, transparent 0.5%, #0e0e0e8e 50%);
 }
 
-
 .vertical-text {
   writing-mode: horizontal-tb; /* Default horizontal text */
   transform: none; /* Reset rotation */
@@ -88,6 +88,7 @@ body {
     writing-mode: vertical-rl; /* Vertical text for large devices */
     transform: rotate(180deg); /* Rotate 180 degrees */
   }
+ 
 }
 
 .bg-layer{
@@ -95,7 +96,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  
 }
 .char {
   transform: translateY(115px);
@@ -127,7 +127,7 @@ body {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #A8FF00; 
+  background: #0E0E0E; 
 }
 
 /* Handle on hover */
