@@ -33,17 +33,17 @@ const AboutProjects = () => {
   }, []);
 
   return (
-    <div className='text-white flex flex-col justify-center h-screen px-[144px]'>
+    <div className='text-white flex flex-col justify-center px-5 lg:h-screen lg:px-[144px]'>
       <p
         id='my-text'
         ref={textRef}
-        className='lg:text-[70px] 2xl:text-[128px] font-custom lg:mt-[-120px]'
+        className='text-[24px] lg:text-[70px] 2xl:text-[128px] font-custom lg:mt-[-120px]'
       >
         Projects
       </p>
-      <div className='flex mt-10 text-[16px] font-custom font-light leading-[21.33px]'>
+      <div className='flex flex-col lg:flex-row mt-10 text-sm lg:text-[16px] font-custom font-light leading-[21.33px]'>
         <p
-          className='w-[476px] text-justify'
+          className='lg:w-[476px] text-justify'
           ref={(el) => (paragraphRefs.current[0] = el)}
         >
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
@@ -54,7 +54,7 @@ const AboutProjects = () => {
           nisl ut aliquip ex ea commodo consequat.
         </p>
         <p
-          className='w-[476px] mx-16 text-justify'
+          className='lg:w-[476px] lg:mx-16 text-justify mt-6 lg:mt-0'
           ref={(el) => (paragraphRefs.current[1] = el)}
         >
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 

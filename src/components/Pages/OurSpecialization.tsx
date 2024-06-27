@@ -21,13 +21,13 @@ const specialties: Specialty[] = [
   },
   {
     id: 2,
-    title: 'ARCHITECTURE',
+    title: 'VISUALIZATIONS & ANIMATIONS',
     description: 'Description for Specialty 2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     image: service1, 
   },
   {
     id: 3,
-    title: 'VISUALIZATIONS & ANIMATIONS',
+    title: 'ARCHITECTURE',
     description: 'Description for Specialty 3. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     image: service3,
   },
@@ -43,7 +43,7 @@ const OurSpecialization: React.FC = () => {
   useEffect(() => {
     if (inView) {
       gsap.fromTo(
-        specialtiesRef.current.filter(el => el !== null), // Filter out null elements
+        specialtiesRef.current.filter(el => el !== null), 
         { autoAlpha: 0, y: 100 },
         {
           duration: 1,

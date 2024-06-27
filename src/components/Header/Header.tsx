@@ -84,7 +84,7 @@ const Header: React.FC = () => {
           </Link>
         </div>
 
-        <div className="flex md:hidden justify-end">
+        <div className="flex lg:hidden justify-end">
           <button onClick={toggleMenu}>
             {isMenuOpen ? closeIcon : hamburgerIcon}
           </button>
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
         <div
           className={`absolute h-fit top-full left-0 right-0 bg-gradient-to-l from-[#0a0a0a] to-[#101111] z-50 shadow-xl shadow-gray-900 ${
             isMenuOpen ? 'block' : 'hidden'
-          } md:hidden`}
+          } lg:hidden`}
         >
           <nav className="flex flex-col px-5 py-3 pb-8">
             <NavLink
@@ -111,7 +111,7 @@ const Header: React.FC = () => {
               About Us
             </NavLink>
             <NavLink
-              to="/articles"
+              to="/projects"
               onClick={closeMenu}
               className="text-white text-[16px] flex items-center py-[18px] border-b border-gray-800"
             >
@@ -133,14 +133,15 @@ const Header: React.FC = () => {
             </NavLink>
             <NavLink
             to="/vegza-viz"
-            className=" text-white w-full border border-[#A8FF00] hover:bg-[#A8FF00] hover:text-black mt-[18px] py-[8px] text-[16px] flex items-center justify-center"
+            onClick={closeMenu}
+            className="text-white w-full border border-[#A8FF00] hover:bg-[#A8FF00] hover:text-black mt-[18px] py-[8px] text-[16px] flex items-center justify-center"
           >
             Vegza Viz
           </NavLink>
           </nav>
         </div>
 
-        <div className="hidden md:flex space-x-16 font-custom">
+        <div className="hidden lg:flex space-x-16 font-custom">
           <NavLink
             to="/"
             className="text-white text-[16px] flex items-center justify-center"

@@ -31,7 +31,7 @@ const SecondDescriptionOfAbout = () => {
   }, [inView]);
 
   return (
-    <div className='flex h-screen justify-center items-center'>
+    <div className='flex flex-col lg:flex-row px-5 lg:px-0 lg:h-screen justify-center items-center py-10'>
       <div className='lg:w-1/2'>
         <img src={image12} alt='' className='firstServiceImage' />
       </div>
@@ -42,10 +42,10 @@ const SecondDescriptionOfAbout = () => {
       >
         Our Offices
       </p>
-      <div className="bg-white lg:w-1/2">
+      <div className="lg:bg-white lg:w-1/2">
         <div className="w-full h-full">
-          <img src={image13} alt="Image 1" className="w-full h-1/2 object-cover pl-3 pb-2" />
-          <img src={image14} alt="Image 2" className="w-full h-1/2 object-cover pl-3 pt-2" />
+          <img src={image13} alt="Image 1" className="w-full h-1/2 object-cover lg:pl-3 pb-2" />
+          <img src={image14} alt="Image 2" className="w-full h-1/2 object-cover lg:pl-3 pt-2" />
         </div>
       </div>
     </div>

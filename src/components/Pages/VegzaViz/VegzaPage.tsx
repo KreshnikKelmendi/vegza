@@ -52,15 +52,15 @@ const AboutUsPage: React.FC = () => {
 
     <div className="lg:hidden">
       <div className="flex flex-col lg:flex-row">
-        <div className=" bg-black">
+        <div className="">
           {/* <div className="description panel bg-black"> */}
             <div>
-             
+            <AboutVegzaViz />
              
             </div>
         </div>
 
-        <div className="bg-black"></div>
+        <div className=""><SecondDescriptionOfVegzaViz /></div>
         <div className=""></div>
         <div className=""></div>
         <div className="bg-white"></div>

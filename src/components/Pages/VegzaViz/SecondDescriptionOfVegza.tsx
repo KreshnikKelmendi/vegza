@@ -32,11 +32,11 @@ const SecondDescriptionOfVegzaViz = () => {
   }, [inView]);
 
   return (
-    <div className='flex ml-[-250px] h-screen justify-center items-center'>
-      <div className=''>
-        <img src={image12} alt='' className='h-screen object-cover firstServiceImage' />
+    <div className='flex flex-col lg:flex-row lg:ml-[-250px] lg:h-screen justify-center items-center pt-10 lg:pt-0 lg:px-0'>
+      <div className='px-4 lg:px-0'>
+        <img src={image12} alt='' className='lg:h-screen object-cover firstServiceImage' />
       </div>
-      <div className='bg-white h-screen'>
+      <div className='bg-white lg:h-screen mt-10 lg:mt-0'>
       <div className='lg:h-[50vh] w-full flex flex-col lg:flex-row-reverse mx-auto text-left'>
         <div className='px-4 lg:px-0 my-10 lg:my-0 flex flex-col 2xl:mx-32 lg:mx-16 text-left justify-center'>
           <p className='text-[40px] font-custom'>Render 3d (Client)</p>
@@ -47,7 +47,7 @@ const SecondDescriptionOfVegzaViz = () => {
             View Projects
           </button>
         </div>
-        <img className='lg:w-1/2 object-cover' alt='' src={image13} />
+        <img className='lg:w-1/2 object-cover px-4 lg:px-0' alt='' src={image13} />
       </div>
 
       <div className='lg:h-[50vh] w-full flex flex-col lg:flex-row text-left 2xl:mx-3'>
@@ -60,7 +60,7 @@ const SecondDescriptionOfVegzaViz = () => {
             View Projects
           </button>
         </div>
-        <img className='lg:w-1/2 object-cover 2xl:mt-[-50px]' alt='' src={image14} />
+        <img className='lg:w-1/2 object-cover 2xl:mt-[-50px] px-4 lg:px-0' alt='' src={image14} />
       </div>
     </div>
     </div>

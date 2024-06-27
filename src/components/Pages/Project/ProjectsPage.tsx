@@ -53,15 +53,14 @@ const ProjectsPage: React.FC = () => {
 
     <div className="lg:hidden">
       <div className="flex flex-col lg:flex-row">
-        <div className=" bg-black">
+        <div className="">
           {/* <div className="description panel bg-black"> */}
             <div>
-             
-             
+            <AboutProjects /> 
             </div>
         </div>
 
-        <div className="bg-black"></div>
+        <div className="bg-[#0E0E0E]"><SecondDescriptionOfProjects /></div>
         <div className=""></div>
         <div className=""></div>
         <div className="bg-white"></div>
