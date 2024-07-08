@@ -1,5 +1,6 @@
 import React from 'react';
 import video1 from '../assets/video1.mp4';
+import { Link } from 'react-router-dom';
 
 const FirstPage: React.FC = () => {
   
@@ -28,9 +29,11 @@ const FirstPage: React.FC = () => {
               Hong Kong dhe Sidnei që ofrojnë shërbime arkitekture, dizajni të brendshëm dhe urban nga 
               koncepti deri në përfundim.
             </p>
+            <Link to="/about-us" onClick={() => window.scrollTo({ top: 0, left: 0 })}>
             <button className='w-[204px] h-[42px] font-light text-base font-custom text-white border border-white hover:bg-white hover:text-black hover:duration-300 lg:mt-10 mt-12'>
               See More
             </button>
+            </Link>
           </div>
         </div>
       </div>

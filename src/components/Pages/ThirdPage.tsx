@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
 import vegza2 from "../assets/vegza-2.png";
+import { Link } from 'react-router-dom';
 
 export const ThirdPage = () => {
   const imageRef = useRef(null);
@@ -50,9 +51,11 @@ export const ThirdPage = () => {
         <p className='text-[#050505] mt-6 lg:mt-8 font-custom text-sm lg:tracking-normal lg:text-[18px] lg:w-[88%] 2xl:w-[749px] lg:h-fit text-justify leading-[23.99px]'>
           Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, ne jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni demokratik që vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, Hong Kong dhe Sidnei që ofrojnë shërbime arkitekture, dizajni të brendshëm dhe urban nga koncepti deri në përfundim.
         </p>
-        <button className='w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 lg:mt-4 text-sm lg:text-base font-semibold' ref={buttonRefInView}>
-          See More
-        </button>
+        <Link to="/about-us" onClick={() => window.scrollTo({ top: 0, left: 0 })}>
+          <button className='w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 lg:mt-4 text-sm lg:text-base font-semibold' ref={buttonRefInView}>
+            See More
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import vegza1 from "../assets/vegza-3.png";
 import vegza2 from "../assets/vegza-4.png";
 import vegza3 from "../assets/vegza-5.png";
+import { Link } from 'react-router-dom';
 
 export const FourthPage = () => {
   const cardsData = [
@@ -122,9 +123,11 @@ export const FourthPage = () => {
             demokratik që vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, Hong Kong dhe Sidnei që ofrojnë shërbime arkitekture, 
             dizajni të brendshëm dhe urban nga koncepti deri në përfundim.
           </p>
-          <button ref={buttonRef} className='w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 text-sm lg:text-base font-semibold'>
-            See More Projects
-          </button>
+          <Link to="/projects" onClick={() => window.scrollTo({ top: 0, left: 0 })}>
+            <button ref={buttonRef} className='w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 text-sm lg:text-base font-semibold'>
+              See More Projects
+            </button>
+          </Link>
         </div>
       </div>
     </div>
