@@ -131,7 +131,7 @@ const Header: React.FC = () => {
               Projects
             </NavLink>
             <NavLink
-              to="/info2"
+              to="/services"
               onClick={closeMenu}
               className="text-white text-[16px] flex items-center py-[18px] border-b border-gray-800"
             >
@@ -174,7 +174,7 @@ const Header: React.FC = () => {
             Projects
           </NavLink>
           <Link
-            to="/info2"
+            to="/services"
             className="text-white text-[16px] flex items-center justify-center"
           >
             Services
