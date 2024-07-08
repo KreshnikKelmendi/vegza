@@ -1,3 +1,4 @@
+import gsap from 'gsap';
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -61,6 +62,13 @@ const Header: React.FC = () => {
   }, [isFixed]);
 
   const toggleMenu = () => {
+    if (!isMenuOpen) {
+      // Animation for opening menu
+      gsap.to('.mobile-menu', { duration: 0.3, opacity: 1, height: 'auto', display: 'block' });
+    } else {
+      // Animation for closing menu
+      gsap.to('.mobile-menu', { duration: 0.3, opacity: 0, height: 0, display: 'none' });
+    }
     setMenuOpen(!isMenuOpen);
   };
 
@@ -71,7 +79,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`lg:w-[100%] px-4 relative lg:px-[50px] py-4 lg:py-6 bg-gradient-to-r from-[#0a0a0a34] to-[#1011110e] flex text-[16px] font-custom z-50 ${
+        className={`lg:w-[100%] px-4 relative lg:px-[50px] py-4 lg:py-6 bg-gradient-to-r from-[#0a0a0a34] to-[#10111100] flex text-[16px] font-custom z-50 ${
           isFixed ? 'sticky top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#0a0a0a34] to-[#1011110e]' : ''
         }`}
       >
@@ -94,6 +102,11 @@ const Header: React.FC = () => {
           className={`absolute h-fit top-full left-0 right-0 bg-gradient-to-l from-[#0a0a0a] to-[#101111] z-50 shadow-xl shadow-gray-900 ${
             isMenuOpen ? 'block' : 'hidden'
           } lg:hidden`}
+          style={{
+            opacity: isMenuOpen ? 1 : 0,
+            height: isMenuOpen ? 'auto' : 0,
+            display: isMenuOpen ? 'block' : 'none',
+          }}
         >
           <nav className="flex flex-col px-5 py-3 pb-8">
             <NavLink

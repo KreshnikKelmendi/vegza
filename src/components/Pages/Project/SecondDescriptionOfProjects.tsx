@@ -1,12 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import SplitType from 'split-type';
 import gsap from 'gsap';
-import image18 from "../../assets/vegza-18.png";
-import image19 from "../../assets/vegza-19.png";
-import image14 from "../../assets/vegza-14.png";
+import { ProjectData, projects } from './projectData'; // Import projects array and ProjectData interface
 
-const SecondDescriptionOfProjects = () => {
+import image18 from "../../assets/vegza-18.png"; // Example import for image
+import image19 from "../../assets/vegza-19.png"; // Example import for image
+import { Link } from 'react-router-dom';
+
+const SecondDescriptionOfProjects: React.FC = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1, // Adjust threshold as needed
@@ -30,20 +32,30 @@ const SecondDescriptionOfProjects = () => {
     }
   }, [inView]);
 
+  // Find the project with id === 1
+  const project = projects.find(project => project.id === 1);
+
+  if (!project) {
+    // Handle case where project with id 1 is not found (optional)
+    return null;
+  }
+
   return (
     <div className='flex flex-col lg:flex-row lg:h-screen justify-center items-center px-5 lg:px-0 py-10 lg:py-0'>
-      <div className='lg:w-1/2 lg:ml-[-250px]'>
+      <div className='lg:w-1/2'>
         <img src={image18} alt='' className='firstServiceImage lg:h-screen' />
       </div>
       <div className="lg:w-1/2 lg:bg-white lg:px-3 py-5 lg:py-0">
         <div className="w-full h-full lg:bg-white relative">
-          <img src={image19} alt="Img 1" className="w-full lg:h-screen object-cover" />
+          <img src={project.cover} alt={project.name} className="w-full h-80 lg:h-screen object-cover" />
           <div className='absolute lg:h-[229px] 2xl:h-[319px] flex flex-col justify-center px-5 lg:px-16 bottom-0 w-full bg-gradient-to-t from-[#0a0a0a] to-[#1011110e]'>
-            <p className='text-white text-[40px] font-custom font-semibold'>Dark Store</p>
-            <p className='text-white text-[20px]'>Interior</p>
+            <p className='text-white text-3xl lg:text-[40px] font-custom font-semibold'>{project.name}</p>
+            <p className='text-white text-[20px]'>{project.description}</p>
+            <Link to={`/projects/${project.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
             <button className='w-[136px] h-[42px] font-light text-base font-custom text-white border border-white hover:bg-white hover:text-black hover:duration-300 lg:mt-6 mt-6'>
-                <p>See More</p>
+              <p>See More</p>
             </button>
+            </Link>
           </div>
         </div>
       </div>

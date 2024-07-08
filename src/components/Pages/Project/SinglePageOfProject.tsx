@@ -1,21 +1,17 @@
+
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Contact from "../Contact";
 import AboutProjects from "./AboutProjects";
 import SecondDescriptionOfProjects from "./SecondDescriptionOfProjects";
-import SecondProjects from "./SecondProjects";
-import ThirdProjects from "./ThirdProjects";
-import FourthProjects from "./FourthProjects";
-import FifthProjects from "./FifthProjects";
-import SixthProjects from "./SixthProjects";
-import SeventhProjects from "./SeventhProjects";
+import SingleWork from "./SingleWork";
 
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ProjectsPage: React.FC = () => {
+const SinglePageOfProject: React.FC = () => {
   const component = useRef<HTMLDivElement | null>(null);
   const slider = useRef<HTMLDivElement | null>(null);
 
@@ -42,23 +38,17 @@ const ProjectsPage: React.FC = () => {
     <>
     <div className="hidden lg:block" ref={component}>
       <div ref={slider} className="w-fit flex flex-col lg:flex-row">
-        <div className="description panel bg-[#0E0E0E]">
+        <div className="description panel bg-white">
           {/* <div className="description panel bg-black"> */}
             <div>
-              <AboutProjects />
+              <SingleWork />
               <div className="scroll-down">
                 <div className="arrow"></div>
               </div>
             </div>
         </div>
 
-        <div className="panel bg-[#0E0E0E]"><SecondDescriptionOfProjects /></div>
-        <div className="panel bg-[#0E0E0E]"><SecondProjects /></div>
-        <div className="panel bg-[#0E0E0E]"><ThirdProjects /></div>
-        <div className="panel bg-[#0E0E0E]"><FourthProjects /></div>
-        <div className="panel bg-[#0E0E0E]"><FifthProjects /></div>
-        <div className="panel bg-[#0E0E0E]"><SixthProjects /></div>
-        <div className="panel bg-[#0E0E0E]"><SeventhProjects /></div>
+      
         <div className="panel bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>
@@ -67,19 +57,10 @@ const ProjectsPage: React.FC = () => {
       <div className="flex flex-col lg:flex-row">
         <div className="">
           {/* <div className="description panel bg-black"> */}
-            <div>
-            <AboutProjects /> 
+            <div className="bg-white">
+            <SingleWork /> 
             </div>
         </div>
-
-        <div className="bg-[#0E0E0E]"><SecondDescriptionOfProjects /></div>
-        <div className=""><SecondProjects /></div>
-        <div className=" bg-[#0E0E0E]"><ThirdProjects /></div>
-        <div className="bg-[#0E0E0E]"><FourthProjects /></div>
-        <div className=" bg-[#0E0E0E]"><FifthProjects /></div>
-        <div className=" bg-[#0E0E0E]"><SixthProjects /></div>
-        <div className=" bg-[#0E0E0E]"><SeventhProjects /></div>
-        <div className="bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>
 
@@ -87,4 +68,4 @@ const ProjectsPage: React.FC = () => {
   );
 }
 
-export default ProjectsPage;
+export default SinglePageOfProject;

@@ -81,12 +81,12 @@ body {
 }
 
 .vertical-text {
-  writing-mode: horizontal-tb; /* Default horizontal text */
-  transform: none; /* Reset rotation */
+  writing-mode: horizontal-tb;
+  transform: none; 
 
-  @media (min-width: 1024px) { /* Adjust the minimum width as needed */
-    writing-mode: vertical-rl; /* Vertical text for large devices */
-    transform: rotate(180deg); /* Rotate 180 degrees */
+  @media (min-width: 1024px) { 
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg);
   }
  
 }

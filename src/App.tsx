@@ -7,6 +7,7 @@ import VegzaPage from './components/Pages/VegzaViz/VegzaPage';
 import ContactPage from './components/Pages/Contact/ContactPage';
 import ProjectsPage from './components/Pages/Project/ProjectsPage';
 import ScrollToTop from './components/Pages/Contact/ScrollToTop';
+import SinglePageOfProject from './components/Pages/Project/SinglePageOfProject';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/vegza-viz" element={<VegzaPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/:projectId" element={<SinglePageOfProject />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
           <ScrollToTop />
