@@ -45,8 +45,8 @@ const SecondDescriptionOfProjects: React.FC = () => {
       <div className='lg:w-1/2'>
         <img src={image18} alt='' className='firstServiceImage lg:h-screen' />
       </div>
-      <div className="lg:w-1/2 lg:bg-white lg:px-3 py-5 lg:py-0">
-        <div className="w-full h-full lg:bg-white relative">
+      <div className="lg:w-1/2 lg:bg-white lg:px-3 py-1 lg:py-0">
+        <div className="hidden lg:block w-full h-full lg:bg-white relative">
           <img src={project.cover} alt={project.name} className="w-full h-80 lg:h-screen object-cover" />
           <div className='absolute lg:h-[229px] 2xl:h-[319px] flex flex-col justify-center px-5 lg:px-16 bottom-0 w-full bg-gradient-to-t from-[#0a0a0a] to-[#1011110e]'>
             <p className='text-white text-3xl lg:text-[40px] font-custom font-semibold'>{project.name}</p>

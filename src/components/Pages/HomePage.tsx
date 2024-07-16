@@ -11,6 +11,7 @@ import OurSpecialization from "./OurSpecialization";
 import Interior from "./Interior";
 import VegzaViz from "./VegzaViz";
 import Contact from "./Contact";
+import Header from "../Header/Header";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -43,6 +44,7 @@ const HomePage: React.FC = () => {
     <div className="hidden lg:block" ref={component}>
       <div ref={slider} className="w-fit flex flex-col lg:flex-row">
         <div className="description panel bg-[#0E0E0E]">
+          <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
               <FirstPage />
@@ -65,7 +67,8 @@ const HomePage: React.FC = () => {
 
     <div className="lg:hidden">
       <div className="flex flex-col lg:flex-row">
-        <div className=" bg-black">
+        <div className="">
+          <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
               <FirstPage />

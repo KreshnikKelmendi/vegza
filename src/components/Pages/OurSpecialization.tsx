@@ -1,37 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
-import service1 from '../assets/vegza-7.png';
-import service2 from "../assets/vegza-8.png";
-import service3 from "../assets/vegza-9.png";
+import { services } from './Services/serviceData';
+import { Link } from 'react-router-dom';
 
-interface Specialty {
-  id: number;
-  title: string;
-  description: string;
-  image: any; 
-}
 
-const specialties: Specialty[] = [
-  {
-    id: 1,
-    title: 'INTERIOR',
-    description: 'Inter’s singular aim is to design the best buildings, places and spaces in the world. Inter’s singular aim is to design the best buildings, places and spaces in the world. A central part of this is providing the complete design of buildings across a range of sectors.',
-    image: service2, 
-  },
-  {
-    id: 2,
-    title: 'VISUALIZATIONS & ANIMATIONS',
-    description: 'Description for Specialty 2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    image: service1, 
-  },
-  {
-    id: 3,
-    title: 'ARCHITECTURE',
-    description: 'Description for Specialty 3. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: service3,
-  },
-];
 
 const OurSpecialization: React.FC = () => {
   const { ref, inView } = useInView({
@@ -39,6 +12,7 @@ const OurSpecialization: React.FC = () => {
   });
 
   const specialtiesRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   useEffect(() => {
     if (inView) {
@@ -65,17 +39,54 @@ const OurSpecialization: React.FC = () => {
         Our <br /> Specialization
       </p>
       <div ref={ref} className='grid lg:grid-cols-3 gap-10 lg:gap-24 lg:ml-32 lg:px-24'>
-        {specialties.map((specialty, index) => (
+        {services.map((specialty, index) => (
           <div
             key={specialty.id}
             ref={(el) => specialtiesRef.current[index] = el}
-            className='text-black font-custom'
+            className='text-black font-custom relative'
+            onMouseEnter={() => setHoverIndex(index)}
+            onMouseLeave={() => setHoverIndex(null)}
           >
-            <img
-              src={specialty.image}
-              alt={`Img for ${specialty.title}`}
-              className='w-full h-64 2xl:h-[528px] object-cover'
-            />
+            <div className='relative'>
+              <img
+                src={specialty.image}
+                alt={`Img for ${specialty.title}`}
+                className='w-full h-64 2xl:h-[528px] object-cover'
+                style={{ position: 'relative' }} 
+              />
+               <Link to={`/services/${specialty.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
+              {hoverIndex === index && (
+                <div
+                  className="absolute inset-0 flex items-center justify-center"
+                  style={{
+                    position: 'absolute',
+                    top: '0',
+                    left: '0',
+                    right: '0',
+                    bottom: '0',
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    zIndex: 10,
+                  }}
+                >
+                  <button
+                    className="text-white text-base font-bold font-custom  py-2 rounded-md transition-colors"
+                    onClick={() => {
+                      // Handle click action here
+                    }}
+                    style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      zIndex: 20,
+                    }}
+                  >
+                    See more
+                  </button>
+                </div>
+              )}
+              </Link>
+            </div>
             <div className='px-4 lg:px-0'>
               <p className='2xl:mt-12 mt-4 text-2xl 2xl:text-[40px] uppercase font-light leading-[37.66px]'>
                 {specialty.title}

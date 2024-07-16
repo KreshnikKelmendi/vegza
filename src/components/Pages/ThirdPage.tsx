@@ -1,27 +1,23 @@
 import React, { useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
-import vegza2 from "../assets/vegza-2.png";
 import { Link } from 'react-router-dom';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import image1 from '../assets/vegza-2.png';
+import image2 from '../assets/vegza-3.png';
+import image3 from '../assets/vegza-4.png';
+
+// Array of imported images
+const images = [image1, image2, image3];
 
 export const ThirdPage = () => {
-  const imageRef = useRef(null);
   const textRef = useRef(null);
   const buttonRef = useRef(null);
 
   // Intersection Observer hooks
-  const [imageRefInView, imageInView] = useInView({ triggerOnce: true, threshold: 0.2 });
   const [textRefInView, textInView] = useInView({ triggerOnce: false, threshold: 0.2 });
   const [buttonRefInView, buttonInView] = useInView({ triggerOnce: true, threshold: 0.2 });
-
-  useEffect(() => {
-    if (imageInView) {
-      gsap.fromTo(imageRef.current, 
-        { opacity: 0, x: -100 },
-        { opacity: 1, x: 0, duration: 1 }
-      );
-    }
-  }, [imageInView]);
 
   useEffect(() => {
     if (textInView) {
@@ -41,10 +37,55 @@ export const ThirdPage = () => {
     }
   }, [buttonInView]);
 
+  // Carousel settings
+  const carouselResponsiveConfig = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+      paritialVisibilityGutter: 60,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      paritialVisibilityGutter: 50,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      paritialVisibilityGutter: 30,
+    },
+  };
+
   return (
     <div className='w-full flex flex-col lg:flex-row font-custom'>
-      <div className='lg:w-1/2' ref={imageRefInView}>
-        <img src={vegza2} alt='' className='w-full h-80 lg:w-[3000px] lg:h-screen object-cover' ref={imageRef} />
+      <div className='lg:w-1/2'>
+        <Carousel
+          additionalTransfrom={0}
+          arrows={false}
+          autoPlay
+          autoPlaySpeed={3000}
+          centerMode={false}
+          className=''
+          containerClass='carousel-container'
+          dotListClass=''
+          draggable
+          focusOnSelect={false}
+          infinite
+          itemClass=''
+          keyBoardControl
+          minimumTouchDrag={80}
+          renderButtonGroupOutside={true}
+          renderDotsOutside={false}
+          responsive={carouselResponsiveConfig}
+          showDots={false}
+          sliderClass=''
+          slidesToSlide={1}
+          swipeable
+        >
+          {images.map((image, index) => (
+            <img key={index} src={image} alt={`Slide ${index}`} className='w-full h-80 lg:w-[3000px] lg:h-screen object-cover' />
+          ))}
+        </Carousel>
       </div>    
       <div className='lg:w-1/2 px-5 py-5 lg:px-0 w-fit bg-white lg:h-screen lg:pl-16 flex flex-col lg:items-start lg:justify-center' ref={textRefInView}>
         <p className='text-3xl lg:text-[40px]' ref={textRef}>About Us</p>

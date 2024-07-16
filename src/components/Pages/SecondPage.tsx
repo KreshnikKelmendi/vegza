@@ -24,7 +24,9 @@ export const SecondPage = () => {
   }, [inView])
 
   return (
-    <div className='w-full flex flex-col lg:flex-row'>
+    <>
+    <div className='w-full flex flex-col lg:flex-row mt-[-110px] lg:mt-0'>
+     
       <div className=''>
         <img src={vegza1} alt='' className='firstServiceImage w-full lg:w-[3000px] h-80 lg:h-screen object-cover' />
       </div>    
@@ -37,5 +39,6 @@ export const SecondPage = () => {
         </p>
       </div>
     </div>
+    </>
   )
 }

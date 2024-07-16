@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Contact from "../Contact";
+import Header from "../../Header/Header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +34,7 @@ const ContactPage: React.FC = () => {
     <div className="hidden lg:block" ref={component}>
       <div ref={slider} className="w-fit flex flex-col lg:flex-row">
         <div className="description panel bg-[#0E0E0E]">
+          <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
               <Contact />

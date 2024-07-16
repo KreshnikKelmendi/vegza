@@ -105,7 +105,7 @@ export const FourthPage = () => {
                 <img
                   src={card.imageSrc}
                   alt={card.title}
-                  className="w-full h-80 lg:h-screen object-cover hover:scale-125 hover:duration-1000"
+                  className="w-full h-80 lg:h-screen object-cover hover:scale-x-125 hover:duration-1000"
                 />
               </div>
             </div>

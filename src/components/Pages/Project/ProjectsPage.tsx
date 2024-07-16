@@ -10,6 +10,8 @@ import FourthProjects from "./FourthProjects";
 import FifthProjects from "./FifthProjects";
 import SixthProjects from "./SixthProjects";
 import SeventhProjects from "./SeventhProjects";
+import Header from "../../Header/Header";
+import MobileProjects from "./MobileProjects";
 
 
 
@@ -43,6 +45,7 @@ const ProjectsPage: React.FC = () => {
     <div className="hidden lg:block" ref={component}>
       <div ref={slider} className="w-fit flex flex-col lg:flex-row">
         <div className="description panel bg-[#0E0E0E]">
+          <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
               <AboutProjects />
@@ -66,6 +69,7 @@ const ProjectsPage: React.FC = () => {
     <div className="lg:hidden">
       <div className="flex flex-col lg:flex-row">
         <div className="">
+          <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
             <AboutProjects /> 
@@ -73,12 +77,12 @@ const ProjectsPage: React.FC = () => {
         </div>
 
         <div className="bg-[#0E0E0E]"><SecondDescriptionOfProjects /></div>
-        <div className=""><SecondProjects /></div>
-        <div className=" bg-[#0E0E0E]"><ThirdProjects /></div>
+        <div className=""><MobileProjects /></div>
+        {/* <div className=" bg-[#0E0E0E]"><ThirdProjects /></div>
         <div className="bg-[#0E0E0E]"><FourthProjects /></div>
         <div className=" bg-[#0E0E0E]"><FifthProjects /></div>
         <div className=" bg-[#0E0E0E]"><SixthProjects /></div>
-        <div className=" bg-[#0E0E0E]"><SeventhProjects /></div>
+        <div className=" bg-[#0E0E0E]"><SeventhProjects /></div> */}
         <div className="bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>

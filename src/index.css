@@ -76,8 +76,14 @@ body {
 }
 
 .firstServiceImage {
-  -webkit-mask-image: linear-gradient(to right, transparent 0.5%, #0e0e0e8e 50%);
-  mask-image: linear-gradient(to right, transparent 0.5%, #0e0e0e8e 50%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0.5%, #0e0e0e8e 55%);
+  mask-image: linear-gradient(to bottom, transparent 0.5%, #0e0e0e8e 55%);
+}
+@media (min-width: 1024px) {
+  .firstServiceImage {
+    -webkit-mask-image: linear-gradient(to right, transparent 0.5%, #0e0e0e8e 50%);
+    mask-image: linear-gradient(to right, transparent 0.5%, #0e0e0e8e 50%);
+  }
 }
 
 .vertical-text {
@@ -136,6 +142,6 @@ body {
 }
 
 .active{
-  color: #A8FF00;
+  
   font-weight: 900;
 }

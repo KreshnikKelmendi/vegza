@@ -6,6 +6,7 @@ import SecondDescriptionOfAbout from "./SecondDescriptionOfAbout";
 import OurTeam from "./OurTeam";
 import SecondTeam from "./SecondTeam";
 import Contact from "../Contact";
+import Header from "../../Header/Header";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -39,6 +40,7 @@ const AboutUsPage: React.FC = () => {
       <div ref={slider} className="w-fit flex flex-col lg:flex-row">
         <div className="description panel bg-[#0E0E0E]">
           {/* <div className="description panel bg-black"> */}
+          <Header />
             <div>
               <AboutDescription />
               <div className="scroll-down">
@@ -57,6 +59,7 @@ const AboutUsPage: React.FC = () => {
     <div className="lg:hidden">
       <div className="flex flex-col lg:flex-row">
         <div className="">
+          <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
               <AboutDescription />

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Contact from "../Contact";
 import OurSpecialization from "../OurSpecialization";
+import Header from "../../Header/Header";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -35,6 +36,7 @@ const ServicesPage: React.FC = () => {
     <div className="hidden lg:block" ref={component}>
       <div ref={slider} className="w-fit flex flex-col lg:flex-row">
         <div className="description panel bg-[#0E0E0E]">
+          <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
              <OurSpecialization />
@@ -43,8 +45,6 @@ const ServicesPage: React.FC = () => {
               </div>
             </div>
         </div>
-
-        <div className="panel bg-[#0E0E0E]"></div>
         <div className="panel bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>

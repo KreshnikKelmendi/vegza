@@ -9,19 +9,21 @@ import ProjectsPage from './components/Pages/Project/ProjectsPage';
 import ScrollToTop from './components/Pages/Contact/ScrollToTop';
 import SinglePageOfProject from './components/Pages/Project/SinglePageOfProject';
 import ServicesPage from './components/Pages/Services/ServicesPage';
+import Interior from './components/Pages/Interior';
 
 
 function App() {
   return (
     <>
        <BrowserRouter>
-          <Header />
+          {/* <Header /> */}
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/vegza-viz" element={<VegzaPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/:projectId" element={<SinglePageOfProject />} />
+            <Route path="/services/:serviceId" element={<Interior />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
