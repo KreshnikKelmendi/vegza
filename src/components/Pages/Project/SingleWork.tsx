@@ -1,66 +1,86 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { projects, ProjectData } from './projectData';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useInView } from 'react-intersection-observer';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
-
-gsap.registerPlugin(ScrollTrigger);
+import Header from '../../Header/Header';
 
 const SingleWork: React.FC = () => {
-    const { projectId } = useParams<{ projectId?: string }>();
-    const parsedProjectId = projectId ? parseInt(projectId) : undefined;
-    const singleProject: ProjectData | undefined = parsedProjectId !== undefined ? projects.find(project => project.id === parsedProjectId) : undefined;
-    
-    // Refs for GSAP animations
-    const img1Ref = useRef<HTMLImageElement>(null);
-    const img2Ref = useRef<HTMLImageElement>(null);
-    const img3Ref = useRef<HTMLImageElement>(null);
-  
-    // Intersection observer hook
-    const [ref, inView] = useInView({
-      triggerOnce: true,
-      threshold: 0.5 // Adjust as needed
-    });
-  
-    useEffect(() => {
-      if (inView) {
-        // Animation timeline
-        const tl = gsap.timeline();
-  
-        // Animate images with delays
-        tl.fromTo(img1Ref.current, { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, delay: 0.2 })
-          .fromTo(img2Ref.current, { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, delay: 0.2 })
-          .fromTo(img3Ref.current, { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, delay: 0.2 }, '-=0.8');
-      }
-    }, [inView]);
-  
-    if (!singleProject) {
-      return <div>Project not found</div>;
+  const { projectId } = useParams<{ projectId?: string }>();
+  const parsedProjectId = projectId ? parseInt(projectId) : undefined;
+  const singleProject: ProjectData | undefined = parsedProjectId !== undefined ? projects.find(project => project.id === parsedProjectId) : undefined;
+
+  if (!singleProject) {
+    return <div>Project not found</div>;
+  }
+
+  // Responsive settings for the Carousel
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
     }
-  
-    return (
-      <div ref={ref} className="flex flex-col lg:flex-row w-full px-4 lg:px-0 py-4 lg:py-0">
-        <div className="flex flex-col lg:h-[100vh] lg:w-[712px] here">
-          <img ref={img1Ref} src={singleProject.cover} alt={singleProject.name} className="lg:h-1/2 object-cover" />
+  };
+
+  // Custom left arrow component
+  const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => (
+    <button onClick={onClick} className="custom-left-arrow">
+      
+    </button>
+  );
+
+  // Custom right arrow component
+  const CustomRightArrow = ({ onClick }: { onClick?: () => void }) => (
+    <button onClick={onClick} className="custom-right-arrow hover:text-white hover::bg-black">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  );
+
+  return (
+    <>
+      <div className='lg:hidden'>
+        <Header />
+      </div>
+      <div className="flex flex-col lg:flex-row w-full px-7 lg:px-0 py-4 lg:py-0">
+        <div className="flex flex-col lg:h-[100vh] lg:w-1/2">
+          <img src={singleProject.cover} alt={singleProject.name} className="h-96 lg:h-1/2 object-cover" />
           <div className="lg:h-[50vh] text-black flex flex-col justify-center py-6 lg:py-0 lg:px-16">
             <p className='text-2xl lg:text-[40px] font-custom'>{singleProject.name}</p>
             <p className='lg:w-[549px] mt-4 lg:mt-0 lg:py-6 text-base font-custom text-justify tracking-tight'>{singleProject.jobDescription}</p>
           </div>
         </div>
-        <div className='lg:w-[444px] lg:px-4 flex flex-col lg:h-screen'>
-          <img ref={img2Ref} src={singleProject.firstImage} alt={singleProject.name} className="h-80 lg:h-[667px] w-full object-cover" />
-          <img ref={img3Ref} src={singleProject.secondImage} alt={singleProject.name} className="h-80 lg:h-1/2 pt-4 w-full object-cover" />
+        <div className='lg:w-1/2 lg:px-4 flex flex-col lg:h-screen'>
+          <img src={singleProject.firstImage} alt={singleProject.name} className="h-80 lg:h-[667px] w-full object-cover" />
+          <img src={singleProject.secondImage} alt={singleProject.name} className="h-80 lg:h-fit pt-4 w-full object-cover" />
         </div>
-        <div className='lg:h-screen'>
-          <img src={singleProject.thirdImage} alt={singleProject.name} className="h-80 pt-4 lg:pt-0 lg:h-screen w-full object-cover" />
+        <div className='lg:h-screen lg:w-1/2'>
+          <Carousel
+            responsive={responsive}
+            infinite={true}
+            // autoPlay={true}
+            autoPlaySpeed={3000}
+            showDots={false}
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
+            removeArrowOnDeviceType={['tablet']}
+          >
+            <img src={singleProject.thirdImage} alt={singleProject.name} className="h-80 pt-4 lg:pt-0 lg:h-screen w-full object-cover" />
+            <img src={singleProject.secondImage} alt={singleProject.name} className="h-80 pt-4 lg:pt-0 lg:h-screen w-full object-cover" />
+          </Carousel>
         </div>
       </div>
-    );
-  };
-  
-  export default SingleWork;
-  
+    </>
+  );
+};
+
+export default SingleWork;

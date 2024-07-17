@@ -50,10 +50,11 @@ const ContactPage: React.FC = () => {
     <div className="lg:hidden">
       <div className="flex flex-col lg:flex-row">
         <div className=" bg-black">
+        <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
              
-             
+            <Contact />
             </div>
         </div>
 

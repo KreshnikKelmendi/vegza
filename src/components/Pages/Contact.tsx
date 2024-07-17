@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className='py-10 lg:py-0 flex flex-col lg:flex-row lg:justify-center lg:items-center text-white lg:h-screen '>
        
-        <div className='lg:w-3/4 px-4 lg:px-0 block w-full lg:justify-center lg:items-center lg:flex'>
+        <div className='lg:w-3/4 px-7 lg:px-0 block w-full lg:justify-center lg:items-center lg:flex'>
             <form>
                 <p className='text-[38px] font-custom font-light'>Contact Us</p>
                 <input className='block bg-[#0E0E0E] w-full lg:w-[398px] mt-[39px] px-[10px] py-[5px] border border-white font-custom' type='text' placeholder='Emri' />
@@ -16,12 +16,16 @@ const Contact = () => {
         </div>
 
         <div className='lg:w-3/4 py-10 lg:py-0'>
-            <iframe className='w-full h-96 lg:h-screen' 
-                    id="gmap_canvas" 
-                    title="Location of Trekuartista" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.045531673183!2d21.14689637501742!3d42.660390516076355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549f017ca6a309%3A0x272afdb51c6b65bc!2sTrekuartista!5e0!3m2!1sen!2s!4v1699412011049!5m2!1sen!2s">
-            </iframe>
-        </div>
+    <iframe
+        className='w-full h-96 lg:h-screen '
+        id="gmap_canvas"
+        title="Location of Vegza"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.045531673183!2d21.14689637501742!3d42.660390516076355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549f017ca6a309%3A0x272afdb51c6b65bc!2sTrekuartista!5e0!3m2!1sen!2s!4v1699412011049!5m2!1sen!2s"
+        style={{ filter: 'grayscale(350%)' }}
+    >
+    </iframe>
+</div>
+
         
         <div className='flex flex-col py-10 lg:py-0 lg:h-screen justify-center items-center mx-auto lg:w-1/2 px-2'>
             <svg width="200" height="91" viewBox="0 0 342 91" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const SixthProjects = () => {
   // Filter projects with IDs 2, 3, and 4
-  const filteredProjects = projects.filter(project => [14, 15, 16].includes(project.id));
+  const filteredProjects = projects.filter(project => [15, 16, 17].includes(project.id));
 
   return (
-    <div className="grid lg:grid-cols-3 gap-y-14 lg:gap-y-0 lg:gap-4 bg-black lg:bg-white">
+    <div className="main_box grid lg:grid-cols-3 gap-y-14 lg:gap-y-0 lg:gap-4 bg-black lg:bg-white">
       {filteredProjects.map((project: ProjectData) => (
-        <div key={project.id} className=" bg-black lg:bg-white lg:py-0 px-4 lg:px-0">
+        <div key={project.id} className={`img img${project.id} bg-black lg:bg-white lg:py-0 px-4 lg:px-0`}>
           <div className="w-full h-full lg:bg-white relative">
             <img src={project.cover} alt={project.name} className="w-full h-80 lg:h-screen object-cover" />
             <div className='absolute lg:h-[229px] 2xl:h-[319px] flex flex-col justify-center px-5 lg:px-16 bottom-0 w-full bg-gradient-to-t from-[#0a0a0a] to-[#1011110e]'>

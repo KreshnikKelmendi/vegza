@@ -25,17 +25,17 @@ export const SecondPage = () => {
 
   return (
     <>
-    <div className='w-full flex flex-col lg:flex-row mt-[-110px] lg:mt-0'>
+    <div className='w-full flex flex-col lg:flex-row mt-[-110px] lg:mt-0 ' style={{ zIndex: 10 }} >
      
-      <div className=''>
-        <img src={vegza1} alt='' className='firstServiceImage w-full lg:w-[3000px] h-80 lg:h-screen object-cover' />
+      <div className='2xl:ml-[-160px]'>
+        <img src={vegza1} alt='' className='firstServiceImage 2xl:w-[320vh] h-80 lg:h-screen object-cover' />
       </div>    
       <div className='bg-white py-10 lg:h-screen w-full relative'>
-        <p ref={ref} className='text-black hidden font-normal lg:block text-left font-custom text-2xl lg:text-[108px] absolute lg:right-0 lg:w-[1056px] lg:h-[594px] lg:leading-[110px]' id='my-text'>
+        <p ref={ref} className='text-black hidden font-normal lg:block text-left font-custom text-2xl lg:text-[108px] absolute 2xl:top-36 lg:right-0 2xl:right-4 lg:w-[1056px] lg:h-[594px] lg:leading-[110px]' id='my-text'>
           The distinctive,<br />personal <br />&cultivated,<br />coalesce in a Vegza designed space
         </p>
-        <p className='text-black lg:hidden text-center font-custom text-3xl lg:text-[108px] lg:w-[1056px] lg:h-[594px] lg:leading-[110px]'>
-          Lorem ipsum dolor sit amet consectour, adis apistamet
+        <p className='text-black px-4 lg:hidden text-center font-custom text-3xl lg:text-[108px] lg:w-[1056px] lg:h-[594px] lg:leading-[110px]'>
+          The distinctive, personal & cultivated, coalesce in a Vegza designed space
         </p>
       </div>
     </div>

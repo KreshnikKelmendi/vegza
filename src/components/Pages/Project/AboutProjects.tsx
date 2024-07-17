@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import SplitType from 'split-type';
 import gsap from 'gsap';
+import image18 from "../../assets/vegza-18.png"; // Example import for image
 
 const AboutProjects = () => {
   const textRef = useRef<HTMLParagraphElement | null>(null);
@@ -33,15 +34,16 @@ const AboutProjects = () => {
   }, []);
 
   return (
-    <div className='text-white flex flex-col justify-center px-5 lg:h-screen lg:px-[144px]'>
+    <div className='flex'>
+    <div className='text-white flex flex-col justify-center px-7 lg:h-screen lg:px-[144px]'>
       <p
         id='my-text'
         ref={textRef}
-        className='text-[24px] lg:text-[70px] 2xl:text-[128px] font-custom lg:mt-[-120px]'
+        className='text-[30px] pt-6 lg:pt-0 lg:text-[70px] 2xl:text-[128px] font-custom lg:mt-[-120px]'
       >
         Projects
       </p>
-      <div className='flex flex-col lg:flex-row mt-10 text-sm lg:text-[16px] font-custom font-light leading-[21.33px]'>
+      <div className='flex flex-col lg:flex-row mt-4 lg:mt-10 text-sm lg:text-[16px] font-custom font-light leading-[21.33px]'>
         <p
           className='lg:w-[476px] text-justify'
           ref={(el) => (paragraphRefs.current[0] = el)}
@@ -54,7 +56,7 @@ const AboutProjects = () => {
           nisl ut aliquip ex ea commodo consequat.
         </p>
         <p
-          className='lg:w-[476px] lg:mx-16 text-justify mt-6 lg:mt-0'
+          className='hidden lg:block lg:w-[476px] lg:mx-16 text-justify mt-6 lg:mt-0'
           ref={(el) => (paragraphRefs.current[1] = el)}
         >
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
@@ -65,6 +67,10 @@ const AboutProjects = () => {
           nisl ut aliquip ex ea commodo consequat.
         </p>
       </div>
+    </div>
+    {/* <div className='h-screen'>
+      <img className='h-screen object-cover firstServiceImage' src={image18} alt='' />
+    </div> */}
     </div>
   );
 };

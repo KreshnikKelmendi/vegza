@@ -25,7 +25,7 @@ const MobileProjects: React.FC = () => {
 
   const handleClick = () => {
     smoothscroll.polyfill();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   };
 
   const handleSeeMore = () => {
@@ -40,7 +40,7 @@ const MobileProjects: React.FC = () => {
   return (
     <div className="grid lg:grid-cols-3 gap-y-14 lg:gap-y-0 lg:gap-4 bg-black lg:bg-white">
       {projects.slice(0, visibleProjects).map((project: ProjectData) => (
-        <Link key={project.id} to={`/projects/${project.id}`} onClick={handleClick}>
+        <Link key={project.id} to={`/projects/${project.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
           <div className="bg-black lg:bg-white lg:py-0 px-5 lg:px-0 relative group">
             <img src={project.cover} alt={project.name} className="w-full h-80 lg:h-screen object-cover group-hover:opacity-60 transition-opacity duration-300" />
             <div className='absolute lg:h-[229px] 2xl:h-[319px] flex flex-col justify-center px-5 lg:px-16 bottom-0 w-full bg-gradient-to-t from-[#0a0a0a] to-[#1011110e]'>

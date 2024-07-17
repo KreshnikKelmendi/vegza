@@ -31,14 +31,14 @@ const SecondDescriptionOfAbout = () => {
   }, [inView]);
 
   return (
-    <div className='flex flex-col lg:flex-row px-5 lg:px-0 lg:h-screen justify-center items-center py-10'>
-      <div className='lg:w-1/2'>
+    <div className='flex flex-col lg:flex-row px-7 lg:px-0 lg:h-screen justify-center items-center py-10 2xl:ml-[-160px]'>
+      <div className='lg:w-1/2 '>
         <img src={image12} alt='' className='firstServiceImage' />
       </div>
       <p
         id='my-text'
         ref={ref}
-        className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 2xl:text-[128px] font-custom text-[#D9D9D9] lg:leading-[73.45px] lg:text-[78px] lg:absolute lg:left-[-20px]'
+        className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 2xl:text-[128px] font-custom text-[#D9D9D9] lg:leading-[73.45px] lg:text-[78px] lg:absolute lg:left-[-60px]'
       >
         Our Offices
       </p>

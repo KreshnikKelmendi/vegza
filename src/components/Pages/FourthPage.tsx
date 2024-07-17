@@ -1,30 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useInView } from 'react-intersection-observer';
-import vegza1 from "../assets/vegza-3.png";
-import vegza2 from "../assets/vegza-4.png";
-import vegza3 from "../assets/vegza-5.png";
 import { Link } from 'react-router-dom';
+import { ProjectData, projects } from './Project/projectData';
 
 export const FourthPage = () => {
-  const cardsData = [
-    {
-      imageSrc: vegza1,
-      title: 'Vegza Design 1',
-      description: 'The distinctive, personal & cultivated, coalesce in a Vegza designed space',
-    },
-    {
-      imageSrc: vegza2,
-      title: 'Vegza Design 2',
-      description: 'The distinctive, personal & cultivated, coalesce in a Vegza designed space',
-    },
-    {
-      imageSrc: vegza3,
-      title: 'Vegza Design 3',
-      description: 'The distinctive, personal & cultivated, coalesce in a Vegza designed space',
-    },
-  ];
-
   const { ref: cardsRef, inView: cardsInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -56,33 +36,47 @@ export const FourthPage = () => {
   useEffect(() => {
     if (textInView) {
       const tl = gsap.timeline();
-      tl.fromTo(headingRef.current, {
-        opacity: 0,
-        x: 100,
-      }, {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: 'power4.out',
-      })
-      .fromTo(paragraphRef.current, {
-        opacity: 0,
-        x: 100,
-      }, {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: 'power4.out',
-      }, "-=0.5") // Start 0.5 seconds before the previous animation ends
-      .fromTo(buttonRef.current, {
-        opacity: 0,
-        x: 100,
-      }, {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: 'power4.out',
-      }, "-=0.5"); // Start 0.5 seconds before the previous animation ends
+      tl.fromTo(
+        headingRef.current,
+        {
+          opacity: 0,
+          x: 100,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: 'power4.out',
+        }
+      )
+        .fromTo(
+          paragraphRef.current,
+          {
+            opacity: 0,
+            x: 100,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: 'power4.out',
+          },
+          '-=0.5'
+        ) // Start 0.5 seconds before the previous animation ends
+        .fromTo(
+          buttonRef.current,
+          {
+            opacity: 0,
+            x: 100,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: 'power4.out',
+          },
+          '-=0.5'
+        ); // Start 0.5 seconds before the previous animation ends
     }
   }, [textInView]);
 
@@ -90,21 +84,19 @@ export const FourthPage = () => {
     cardRefs.current[index] = el;
   };
 
+  // Filter projects to include only IDs 1, 2, and 3
+  const filteredProjects = projects.filter((project) => [1, 2, 3].includes(project.id));
+
   return (
-    <div className='w-full flex flex-col lg:flex-row'>
-      <div className='bg-white lg:h-screen w-full lg:w-3/4 relative'>
-        <div ref={cardsRef} className='grid grid-cols-3 gap-x-1 lg:gap-x-4 gap-y-4'>
-          {cardsData.map((card, index) => (
-            <div
-              key={index}
-              ref={(el) => setRefs(el, index)}
-              className="card"
-              style={{ opacity: 0, transform: 'translateY(500px)' }}
-            >
+    <div className="w-full flex flex-col lg:flex-row">
+      <div className="bg-white lg:h-screen w-full lg:w-3/4 relative">
+        <div ref={cardsRef} className="main_box grid grid-cols-3 gap-x-1 lg:gap-x-4 gap-y-4">
+          {filteredProjects.map((project: ProjectData, index: number) => (
+            <div key={index} ref={(el) => setRefs(el, index)} className="card">
               <div className="bg-white overflow-hidden">
                 <img
-                  src={card.imageSrc}
-                  alt={card.title}
+                  src={project.cover}
+                  alt={project.name}
                   className="w-full h-80 lg:h-screen object-cover hover:scale-x-125 hover:duration-1000"
                 />
               </div>
@@ -114,17 +106,27 @@ export const FourthPage = () => {
       </div>
       <div
         ref={textRef}
-        className='lg:w-1/2 bg-white lg:h-screen px-5 lg:px-0 lg:pl-16 flex flex-col items-start justify-center'
+        className="lg:w-1/2 bg-white lg:h-screen px-7 py-7 lg:px-0 lg:pl-16 flex flex-col items-start justify-center"
       >
-        <div ref={textContainerRef} className='py-5 lg:py-0'>
-          <p ref={headingRef} className='text-3xl font-custom lg:text-[40px] font-light'>Projects</p>
-          <p ref={paragraphRef} className='text-[#050505] mt-6 lg:mt-8 font-custom text-sm lg:tracking-normal lg:text-[18px] lg:w-[88%] 2xl:w-[649px] lg:h-fit text-justify leading-[23.99px]'>
-            Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, ne jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni 
-            demokratik që vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, Hong Kong dhe Sidnei që ofrojnë shërbime arkitekture, 
-            dizajni të brendshëm dhe urban nga koncepti deri në përfundim.
+        <div ref={textContainerRef} className="py-5 lg:py-0">
+          <p ref={headingRef} className="text-3xl font-custom lg:text-[40px] font-light">
+            Latest Projects
+          </p>
+          <p
+            ref={paragraphRef}
+            className="text-[#050505] mt-6 lg:mt-8 font-custom text-sm 2xl:pr-36 lg:tracking-normal lg:text-[18px] lg:w-[88%] 2xl:w-[749px] lg:h-fit text-justify leading-[23.99px]"
+          >
+            Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, ne
+            jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni demokratik që
+            vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, Hong
+            Kong dhe Sidnei që ofrojnë shërbime arkitekture, dizajni të brendshëm dhe urban nga
+            koncepti deri në përfundim.
           </p>
           <Link to="/projects" onClick={() => window.scrollTo({ top: 0, left: 0 })}>
-            <button ref={buttonRef} className='w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 text-sm lg:text-base font-semibold'>
+            <button
+              ref={buttonRef}
+              className="w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 text-sm lg:text-base font-semibold"
+            >
               See More Projects
             </button>
           </Link>

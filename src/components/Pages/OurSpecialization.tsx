@@ -35,7 +35,7 @@ const OurSpecialization: React.FC = () => {
 
   return (
     <div className='w-full flex flex-col lg:flex-row lg:items-center bg-layer lg:h-screen bg-white relative pb-5 lg:pb-0'>
-      <p className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 lg:text-[78px] font-custom text-black lg:leading-[73.45px] lg:absolute lg:left-[-60px]'>
+      <p className='vertical-text text-4xl py-10 font-light lg:py-0 px-7 lg:px-0 lg:text-[78px] font-custom text-black lg:leading-[73.45px] lg:absolute lg:left-[-60px]'>
         Our <br /> Specialization
       </p>
       <div ref={ref} className='grid lg:grid-cols-3 gap-10 lg:gap-24 lg:ml-32 lg:px-24'>
@@ -87,7 +87,7 @@ const OurSpecialization: React.FC = () => {
               )}
               </Link>
             </div>
-            <div className='px-4 lg:px-0'>
+            <div className='px-7 py-7 lg:py-0 lg:px-0'>
               <p className='2xl:mt-12 mt-4 text-2xl 2xl:text-[40px] uppercase font-light leading-[37.66px]'>
                 {specialty.title}
               </p>

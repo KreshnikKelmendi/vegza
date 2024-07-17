@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
 
 const SecondProjects: React.FC = () => {
-  const filteredProjects: ProjectData[] = projects.filter(project => [2, 3, 4].includes(project.id));
+  const filteredProjects: ProjectData[] = projects.filter(project => [3, 4, 5].includes(project.id));
 
   // Scroll restoration logic
   useEffect(() => {
@@ -30,11 +30,12 @@ const SecondProjects: React.FC = () => {
   };
 
   return (
-    <div className="grid lg:grid-cols-3 gap-y-14 lg:gap-y-0 lg:gap-4 bg-black lg:bg-white">
-      {filteredProjects.map((project: ProjectData) => (
-        <Link key={project.id} to={`/projects/${project.id}`} onClick={handleClick}>
+    <div className="main_box grid lg:grid-cols-3 py-14 lg:py-0 gap-y-14 lg:gap-y-0 lg:gap-4 bg-black lg:bg-white lg:px-4 px-4">
+      {filteredProjects.map(project => (
+        <div key={project.id} className={`img img${project.id}`}>
+          <Link key={project.id} to={`/projects/${project.id}`} onClick={handleClick}>
           <div className="bg-black lg:bg-white lg:py-0 px-4 lg:px-0 relative group">
-            <img src={project.cover} alt={project.name} className="w-full h-80 lg:h-screen object-cover group-hover:opacity-60 transition-opacity duration-300" />
+            <img src={project.cover} alt={project.name} className="w-full h-80 lg:h-screen object-cover " />
             <div className='absolute lg:h-[229px] 2xl:h-[319px] flex flex-col justify-center px-5 lg:px-16 bottom-0 w-full bg-gradient-to-t from-[#0a0a0a] to-[#1011110e]'>
               <p className='text-white text-3xl lg:text-[40px] font-custom font-semibold'>{project.name}</p>
               <p className='text-white text-[20px]'>{project.description}</p>
@@ -44,6 +45,7 @@ const SecondProjects: React.FC = () => {
             </div>
           </div>
         </Link>
+        </div>
       ))}
     </div>
   );

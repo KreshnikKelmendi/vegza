@@ -33,7 +33,7 @@ const AboutVegzaViz = () => {
   }, []);
 
   return (
-    <div className='text-white flex flex-col justify-center lg:h-screen px-5 lg:px-[144px]'>
+    <div className='text-white flex flex-col justify-center lg:h-screen px-7 lg:px-[144px]'>
         <svg className='absolute inset-0 mx-auto top-[25vh] lg:top-1 lg:w-[750px] lg:h-[535px] 2xl:w-[1003px] 2xl:h-[935px]' viewBox="0 0 1003 935" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M59.6052 149.166C87.8539 30.1541 454.579 18.9576 544.82 144.316C613.739 240.05 768.808 38.5438 876.249 99.2245C930.984 130.129 934.12 260.338 948.811 420.048C960.308 545.345 967.803 698.221 920.025 725.831C847.343 767.81 784.485 680.405 707.981 682.632C691.438 683.12 671.73 688.947 651.603 701.547C628.043 716.313 600.451 742.916 579.847 763.173C541.714 800.637 468.375 894.358 468.375 894.358C456.251 912.907 436.901 924.714 415.491 928.68C408.862 929.717 402.203 929.839 395.693 929.137C370.191 926.392 350.722 908.88 335.702 887.616C333.88 885.023 322.085 857.962 320.861 854.911C320.652 854.362 318.681 849.298 318.502 848.749C317.666 846.399 316.77 844.111 315.725 841.915C310.648 831.237 298.554 811.071 288.282 806.464C286.401 805.61 283.803 802.895 281.892 802.041C274.158 798.471 266.603 794.414 258.122 793.163C231.098 789.258 203.536 770.922 184.843 750.055C171.316 744.868 154.325 718.997 140.32 682.601C139.932 681.594 138.946 678.635 138.528 677.598C130.675 658.286 112.579 607.887 93.4977 570.24C61.815 507.729 35.3281 448.268 43.0323 408.302C46.4066 390.73 55.783 372.608 80.4782 358.025C162.686 309.395 49.1837 192.915 59.5754 149.136L59.6052 149.166Z" stroke="#A8FF00" stroke-opacity="0.42" stroke-width="1.15" stroke-miterlimit="10"/>
                     <path d="M899.868 687.818C810.523 709.54 753.16 621.127 686.48 653.405C658.679 666.859 587.191 748.773 574.47 760.244L468.642 893.107C454.13 911.321 432.361 921.907 409.398 921.907C374.55 921.907 344.091 897.806 335.402 863.301L326.115 826.417L324.443 819.674C316.32 787.031 287.564 764.21 254.597 764.21C221.72 764.21 193.023 741.482 184.812 708.96L183.169 703.133C183.169 703.133 159.698 620.273 126.045 585.89C92.3913 551.508 103.171 504.769 127.389 477.251C151.606 449.763 137.691 307.32 128.613 273.426C90.1218 129.794 489.844 137.177 480.557 267.721C469.956 416.601 753.07 88.3026 819.75 208.383C852.06 266.562 788.933 322.422 842.863 463.583C868.245 529.969 948.691 675.95 899.897 687.818H899.868Z" stroke="#A8FF00" stroke-opacity="0.42" stroke-width="1.15" stroke-miterlimit="10"/>
@@ -46,11 +46,11 @@ const AboutVegzaViz = () => {
       <p
         id='my-text'
         ref={textRef}
-        className='text-[24px] lg:text-[70px] 2xl:text-[128px] font-custom lg:mt-[-120px] text-[#A8FF00]'
+        className='text-[30px] pt-6 lg:pt-0 lg:text-[70px] 2xl:text-[128px] font-custom lg:mt-[-120px] text-[#A8FF00]'
       >
         Vegza Viz
       </p>
-      <div className='flex flex-col lg:flex-row mt-10 text-sm lg:text-[16px] font-custom font-light leading-[21.33px]'>
+      <div className='flex flex-col lg:flex-row mt-4 lg:mt-10 text-sm lg:text-[16px] font-custom font-light leading-[21.33px]'>
         <p
           className='lg:w-[476px] text-justify'
           ref={(el) => (paragraphRefs.current[0] = el)}
@@ -63,7 +63,7 @@ const AboutVegzaViz = () => {
           nisl ut aliquip ex ea commodo consequat.
         </p>
         <p
-          className='lg:w-[476px] lg:mx-16 text-justify mt-6 lg:mt-0'
+          className='hidden lg:block lg:w-[476px] lg:mx-16 text-justify mt-6 lg:mt-0'
           ref={(el) => (paragraphRefs.current[1] = el)}
         >
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 

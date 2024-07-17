@@ -52,6 +52,7 @@ const ServicesPage: React.FC = () => {
     <div className="lg:hidden">
       <div className="flex flex-col lg:flex-row">
         <div className="">
+        <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
           <OurSpecialization />
