@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
         <div className="description panel bg-[#0E0E0E]">
           <Header />
           {/* <div className="description panel bg-black"> */}
-            <div>
+            <div className="">
               <FirstPage />
               <div className="scroll-down">
                 <div className="arrow"></div>

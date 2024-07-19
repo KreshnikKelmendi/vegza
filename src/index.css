@@ -196,3 +196,8 @@ body {
 .custom-right-arrow:hover{
   background-color: black;
 }
+.panelisima{
+  width: 125vw;
+  /* width: 1740px; */
+  height: 100vh;
+}

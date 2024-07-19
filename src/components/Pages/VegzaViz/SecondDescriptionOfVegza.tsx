@@ -33,10 +33,12 @@ const SecondDescriptionOfVegzaViz = () => {
 
   return (
     <div className='flex flex-col lg:flex-row lg:h-screen justify-center items-center pt-10 lg:pt-0 lg:px-0 2xl:ml-[-180px]'>
-      <div className='px-7 lg:px-0 2xl:w-full'>
+      <div className='px-7 lg:px-0 lg:w-full'>
         <img src={image12} alt='' className='w-full lg:h-screen object-cover firstServiceImage' />
       </div>
-      <div className='bg-white lg:h-screen pb-12 lg:pb-0 mt-10 lg:mt-0'>
+    
+     
+      {/* <div className='bg-white lg:h-screen pb-12 lg:pb-0 mt-10 lg:mt-0'>
       <div className='lg:h-[50vh] w-full flex flex-col lg:flex-row-reverse mx-auto text-left'>
         <div className='px-7 lg:px-0 my-10 lg:my-0 flex flex-col 2xl:mx-16 lg:mx-16 text-left justify-center'>
           <p className='text-[30px] g:text-[40px] font-custom'>Render 3d (Client)</p>
@@ -62,7 +64,7 @@ const SecondDescriptionOfVegzaViz = () => {
         </div>
         <img className='lg:w-1/2 object-cover 2xl:mt-[-50px] px-4 lg:px-0' alt='' src={image14} />
       </div>
-    </div>
+    </div> */}
     </div>
   );
 };

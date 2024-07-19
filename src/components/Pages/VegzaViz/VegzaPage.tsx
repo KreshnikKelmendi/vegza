@@ -5,6 +5,7 @@ import AboutVegzaViz from "./AboutVegzaVix";
 import SecondDescriptionOfVegzaViz from "./SecondDescriptionOfVegza";
 import Contact from "../Contact";
 import Header from "../../Header/Header";
+import VegzaVizProject from "./VegzaVizProject";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -48,6 +49,7 @@ const AboutUsPage: React.FC = () => {
         </div>
 
         <div className="panel bg-[#0E0E0E]"><SecondDescriptionOfVegzaViz /></div>
+        <div className="panel bg-[#0E0E0E]"><VegzaVizProject /></div>
         <div className="panel bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>
@@ -64,6 +66,8 @@ const AboutUsPage: React.FC = () => {
         </div>
 
         <div className=""><SecondDescriptionOfVegzaViz /></div>
+        <div className=""><VegzaVizProject /></div>
+
         <div className=""><Contact /></div>
         <div className=""></div>
         <div className="bg-white"></div>

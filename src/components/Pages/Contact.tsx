@@ -11,7 +11,7 @@ const Contact = () => {
                 <input className='block bg-[#0E0E0E] w-full lg:w-[398px] mt-[39px] px-[10px] py-[5px] border border-white font-custom' type='text' placeholder='Emri' />
                 <input className='block bg-[#0E0E0E] w-full lg:w-[398px] mt-8 px-[10px] py-[5px] border border-white font-custom' type='text' placeholder='Mbiemri' />
                 <textarea rows={5} className='block bg-[#0E0E0E] w-full lg:w-[398px] mt-8 px-[10px] py-[5px] border border-white font-custom' placeholder='Mesazhi' />
-                <button type='submit' className='block bg-[#0E0E0E] w-[150px] mt-8 px-[10px] py-[5px] border border-white font-custom hover:bg-white hover:text-black duration-700' >Send</button>
+                <button type='submit' className='block bg-[#0E0E0E] w-full lg:w-[150px] mt-8 px-[10px] py-[5px] border border-white font-custom hover:bg-white hover:text-black duration-700' >Send</button>
             </form>
         </div>
 

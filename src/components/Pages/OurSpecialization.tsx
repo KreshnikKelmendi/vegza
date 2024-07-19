@@ -51,7 +51,7 @@ const OurSpecialization: React.FC = () => {
               <img
                 src={specialty.image}
                 alt={`Img for ${specialty.title}`}
-                className='w-full h-64 2xl:h-[528px] object-cover'
+                className='w-full h-64 2xl:h-[628px] object-cover'
                 style={{ position: 'relative' }} 
               />
                <Link to={`/services/${specialty.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>

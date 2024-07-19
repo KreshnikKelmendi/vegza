@@ -108,13 +108,13 @@ export const FourthPage = () => {
         ref={textRef}
         className="lg:w-1/2 bg-white lg:h-screen px-7 py-7 lg:px-0 lg:pl-16 flex flex-col items-start justify-center"
       >
-        <div ref={textContainerRef} className="py-5 lg:py-0">
+        <div ref={textContainerRef} className="py-10 lg:py-0">
           <p ref={headingRef} className="text-3xl font-custom lg:text-[40px] font-light">
             Latest Projects
           </p>
           <p
             ref={paragraphRef}
-            className="text-[#050505] mt-6 lg:mt-8 font-custom text-sm 2xl:pr-36 lg:tracking-normal lg:text-[18px] lg:w-[88%] 2xl:w-[749px] lg:h-fit text-justify leading-[23.99px]"
+            className="text-[#050505] mt-6 lg:mt-8 font-custom text-sm 2xl:pr-44 lg:tracking-normal lg:text-[18px] lg:w-[88%] 2xl:w-[749px] lg:h-fit text-justify leading-[23.99px]"
           >
             Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, ne
             jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni demokratik që
@@ -125,9 +125,9 @@ export const FourthPage = () => {
           <Link to="/projects" onClick={() => window.scrollTo({ top: 0, left: 0 })}>
             <button
               ref={buttonRef}
-              className="w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 text-sm lg:text-base font-semibold"
+              className="w-full lg:w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 text-sm lg:text-base font-semibold"
             >
-              See More Projects
+              See More
             </button>
           </Link>
         </div>

@@ -190,42 +190,42 @@ const Header: React.FC = () => {
             <NavLink
               to="/"
               onClick={closeMenu}
-              className="text-white text-[24px] py-[18px] mt-[-75px]"
+              className="text-white text-[32px] py-[18px] mt-[-105px]"
             >
               Home
             </NavLink>
             <NavLink
               to="/about-us"
               onClick={closeMenu}
-              className="text-white text-[24px] py-[18px]"
+              className="text-white text-[32px] py-[18px]"
             >
               About Us
             </NavLink>
             <NavLink
               to="/projects"
               onClick={closeMenu}
-              className="text-white text-[24px] py-[18px]"
+              className="text-white text-[32px] py-[18px]"
             >
               Projects
             </NavLink>
             <NavLink
               to="/services"
               onClick={closeMenu}
-              className="text-white text-[24px] py-[18px]"
+              className="text-white text-[32px] py-[18px]"
             >
               Services
             </NavLink>
             <NavLink
               to="/contact"
               onClick={closeMenu}
-              className="text-white text-[24px] py-[18px]"
+              className="text-white text-[32px] py-[18px]"
             >
               Contact
             </NavLink>
             <NavLink
               to="/vegza-viz"
               onClick={closeMenu}
-              className="text-white w-fit px-8 border border-[#A8FF00] hover:bg-[#A8FF00] hover:text-black mt-[18px] py-[8px] text-[24px] z-50"
+              className="text-white w-fit px-8 border border-[#A8FF00] hover:bg-[#A8FF00] hover:text-black mt-[18px] py-[8px] text-[32px] z-50"
             >
               Vegza Viz
             </NavLink>
@@ -234,37 +234,37 @@ const Header: React.FC = () => {
 
         <div className="hidden lg:flex space-x-16 font-custom">
           <NavLink
-            to="/"
+            to="/" onClick={() => window.scrollTo({ top: 0, left: 0 })}
             className="text-white text-[16px] flex items-center justify-center"
           >
             Home
           </NavLink>
           <NavLink
-            to="/about-us"
+            to="/about-us" onClick={() => window.scrollTo({ top: 0, left: 0 })}
             className="text-white text-[16px] flex items-center justify-center"
           >
             About Us
           </NavLink>
           <NavLink
-            to="/projects"
+            to="/projects" onClick={() => window.scrollTo({ top: 0, left: 0 })}
             className="text-white text-[16px] flex items-center justify-center"
           >
             Projects
           </NavLink>
           <Link
-            to="/services"
+            to="/services" onClick={() => window.scrollTo({ top: 0, left: 0 })}
             className="text-white text-[16px] flex items-center justify-center"
           >
             Services
           </Link>
           <NavLink
-            to="/contact"
+            to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0 })}
             className=" text-white text-[16px] flex items-center justify-center"
           >
             Contact
           </NavLink>
           <NavLink
-            to="/vegza-viz"
+            to="/vegza-viz" onClick={() => window.scrollTo({ top: 0, left: 0 })}
             className=" text-white border border-[#A8FF00] hover:bg-[#A8FF00] hover:text-black px-6 py-2 text-[16px] flex items-center justify-center"
           >
             Vegza Viz

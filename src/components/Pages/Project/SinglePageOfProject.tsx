@@ -17,7 +17,7 @@ const SinglePageOfProject: React.FC = () => {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      let panels = gsap.utils.toArray<HTMLDivElement>(".panel");
+      let panels = gsap.utils.toArray<HTMLDivElement>(".panelisima");
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
         ease: "none",
@@ -38,7 +38,7 @@ const SinglePageOfProject: React.FC = () => {
     <>
     <div className="hidden lg:block" ref={component}>
       <div ref={slider} className="w-fit flex flex-col lg:flex-row">
-        <div className="description panel bg-white">
+        <div className="panelisima bg-white">
           {/* <div className="description panel bg-black"> */}
             <div>
               <SingleWork />
@@ -49,7 +49,7 @@ const SinglePageOfProject: React.FC = () => {
         </div>
 
       
-        <div className="panel bg-[#0E0E0E]"><Contact /></div>
+        <div className="panelisima bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>
 
@@ -60,6 +60,7 @@ const SinglePageOfProject: React.FC = () => {
             <div className="bg-white">
             <SingleWork /> 
             </div>
+            <div className=" bg-[#0E0E0E]"><Contact /></div>
         </div>
       </div>
     </div>
