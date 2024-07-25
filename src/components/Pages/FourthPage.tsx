@@ -92,7 +92,7 @@ export const FourthPage = () => {
       <div className="bg-white w-full lg:w-3/4 relative 2xl:ml-[-550px]">
         <div ref={cardsRef} className="main_box grid gap-x-1 lg:grid-cols-3  lg:py-0 gap-y-14 lg:gap-y-0 lg:gap-4 bg-white px-0 lg:px-0">
           {filteredProjects.map((project: ProjectData, index: number) => (
-            <Link key={project.id} className={`img img${project.id}`} to={`/projects/${project.id}`}>
+            <Link key={project.id} className={`img img${project.id}`} to={`/projects/${project.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
               <div ref={(el) => setRefs(el, index)} className="bg-white px-0 lg:px-0 relative group">
                 <img
                   src={project.cover}
@@ -103,7 +103,7 @@ export const FourthPage = () => {
                   <p className='text-white text-2xl lg:text-[40px] font-custom font-semibold'>{project.name}</p>
                   <p className='text-white text-base lg:text-[20px] mt-2'>{project.description}</p>
                   <button className='w-[136px] h-[42px] font-light text-center items-center flex justify-center text-base font-custom text-white border border-white hover:bg-white hover:text-black hover:duration-300 lg:mt-6 mt-6'>
-                    See More
+                    <p>See More</p>
                   </button>
                 </div>
               </div>
