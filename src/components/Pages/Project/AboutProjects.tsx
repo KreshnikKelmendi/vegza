@@ -48,23 +48,21 @@ const AboutProjects = () => {
           className='lg:w-[476px] text-justify'
           ref={(el) => (paragraphRefs.current[0] = el)}
         >
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
-          laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <br /> <br />Lorem ipsum dolor sit amet, 
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam 
-          erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis 
-          nisl ut aliquip ex ea commodo consequat.
+          Here, we showcase a curated selection of our most innovative and impactful work. 
+          Each project highlights our commitment to blending creativity with functionality, 
+          resulting in spaces that inspire and captivate. <br /> <br />
+          From residential masterpieces to dynamic commercial spaces, our portfolio reflects 
+          a diverse range of styles and solutions tailored to meet the unique needs of our 
+          clients.
         </p>
         <p
           className='hidden lg:block lg:w-[476px] lg:mx-16 text-justify mt-6 lg:mt-0'
           ref={(el) => (paragraphRefs.current[1] = el)}
         >
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
-          laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <br /> <br /> Lorem ipsum dolor sit amet, 
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam 
-          erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis 
-          nisl ut aliquip ex ea commodo consequat.
+          Explore our completed projects to see how we turn visionary concepts into 
+          tangible realities, and how our designs elevate everyday experiences. <br /> <br />
+          We believe that every project is unique and deserves a tailored approach. We listen carefully, ensuring that we fully grasp the vision and goals before we begin the design process.
+          At Vegza, every project tells a story of collaboration, creativity, and excellence.
         </p>
       </div>
     </div>

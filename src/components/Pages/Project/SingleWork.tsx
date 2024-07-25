@@ -52,14 +52,39 @@ const SingleWork: React.FC = () => {
         <Header />
       </div>
       <div className="flex flex-col lg:flex-row w-full px-7 lg:px-0 py-4 lg:py-0">
-        <div className="flex flex-col lg:h-[100vh] lg:w-1/2">
+      <div className='block lg:hidden lg:h-screen lg:w-1/2 lg:px-0 pb-4 lg:pb-0'>
+          <Carousel
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            showDots={false}
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
+            removeArrowOnDeviceType={['tablet']}
+          >
+            <img src={singleProject.thirdImage} alt={singleProject.name} className="h-80 pt-4 lg:pt-0 lg:h-screen w-full object-cover" />
+            <img src={singleProject.secondImage} alt={singleProject.name} className="h-80 pt-4 lg:pt-0 lg:h-screen w-full object-cover" />
+          </Carousel>
+        </div>
+        <div className="lg:h-[50vh] lg:hidden text-black flex flex-col justify-center py-6 lg:py-0 lg:px-16">
+            <p className='text-2xl lg:text-[40px] font-custom 2xl:px-6'>{singleProject.name}</p>
+            <p className='lg:w-[549px] mt-4 lg:mt-0 lg:py-6 text-base font-custom text-justify tracking-tight 2xl:px-6 2xl:mt-6'>{singleProject.jobDescription}</p>
+            <img src={singleProject.cover} alt={singleProject.name} className="h-[66vh] mt-8 lg:h-1/2 object-cover" />
+
+          </div>
+        <div className="hidden lg:flex flex-col lg:h-[100vh] lg:w-1/2">
           <img src={singleProject.cover} alt={singleProject.name} className="h-[66vh] lg:h-1/2 object-cover" />
           <div className="lg:h-[50vh] text-black flex flex-col justify-center py-6 lg:py-0 lg:px-16">
             <p className='text-2xl lg:text-[40px] font-custom 2xl:px-6'>{singleProject.name}</p>
             <p className='lg:w-[549px] mt-4 lg:mt-0 lg:py-6 text-base font-custom text-justify tracking-tight 2xl:px-6 2xl:mt-6'>{singleProject.jobDescription}</p>
           </div>
         </div>
-        <div className='lg:h-screen lg:w-1/2 lg:px-4 pb-4 lg:pb-0'>
+        <div className='lg:px-4 flex flex-col lg:h-screen'>
+          <img src={singleProject.firstImage} alt={singleProject.name} className="h-[66vh] lg:h-[607px] lg:w-[800px] object-cover" />
+          <img src={singleProject.secondImage} alt={singleProject.name} className="h-[66vh] lg:h-full pt-4 w-full object-cover" />
+        </div>
+        <div className='hidden lg:block lg:h-screen lg:w-1/2 lg:px-0 pb-4 lg:pb-0'>
           <Carousel
             responsive={responsive}
             infinite={true}
@@ -74,10 +99,7 @@ const SingleWork: React.FC = () => {
             <img src={singleProject.secondImage} alt={singleProject.name} className="h-[66vh] pt-4 lg:pt-0 lg:h-screen w-full object-cover" />
           </Carousel>
         </div>
-        <div className='lg:pr-4 flex flex-col lg:h-screen'>
-          <img src={singleProject.firstImage} alt={singleProject.name} className="h-[66vh] lg:h-[667px] lg:w-[800px] object-cover" />
-          <img src={singleProject.secondImage} alt={singleProject.name} className="h-[66vh] lg:h-[361px] pt-4 w-full object-cover" />
-        </div>
+       
         
       </div>
     </>

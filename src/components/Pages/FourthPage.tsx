@@ -62,7 +62,7 @@ export const FourthPage = () => {
             ease: 'power4.out',
           },
           '-=0.5'
-        ) // Start 0.5 seconds before the previous animation ends
+        )
         .fromTo(
           buttonRef.current,
           {
@@ -76,7 +76,7 @@ export const FourthPage = () => {
             ease: 'power4.out',
           },
           '-=0.5'
-        ); // Start 0.5 seconds before the previous animation ends
+        );
     }
   }, [textInView]);
 
@@ -89,18 +89,25 @@ export const FourthPage = () => {
 
   return (
     <div className="w-full flex flex-col lg:flex-row">
-      <div className="bg-white lg:h-screen w-full lg:w-3/4 relative">
-        <div ref={cardsRef} className="main_box grid grid-cols-3 gap-x-1 lg:gap-x-4 gap-y-4">
+      <div className="bg-white w-full lg:w-3/4 relative 2xl:ml-[-550px]">
+        <div ref={cardsRef} className="main_box grid gap-x-1 lg:grid-cols-3  lg:py-0 gap-y-14 lg:gap-y-0 lg:gap-4 bg-white px-0 lg:px-0">
           {filteredProjects.map((project: ProjectData, index: number) => (
-            <div key={index} ref={(el) => setRefs(el, index)} className="card">
-              <div className="bg-white overflow-hidden">
+            <Link key={project.id} className={`img img${project.id}`} to={`/projects/${project.id}`}>
+              <div ref={(el) => setRefs(el, index)} className="bg-white px-0 lg:px-0 relative group">
                 <img
                   src={project.cover}
                   alt={project.name}
                   className="w-full h-80 lg:h-screen object-cover hover:scale-x-125 hover:duration-1000"
                 />
+                <div className='absolute inset-0 flex flex-col justify-end px-5 lg:px-16 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pb-4 lg:pb-8'>
+                  <p className='text-white text-2xl lg:text-[40px] font-custom font-semibold'>{project.name}</p>
+                  <p className='text-white text-base lg:text-[20px] mt-2'>{project.description}</p>
+                  <button className='w-[136px] h-[42px] font-light text-center items-center flex justify-center text-base font-custom text-white border border-white hover:bg-white hover:text-black hover:duration-300 lg:mt-6 mt-6'>
+                    See More
+                  </button>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -116,11 +123,9 @@ export const FourthPage = () => {
             ref={paragraphRef}
             className="text-[#050505] mt-6 lg:mt-8 font-custom text-sm 2xl:pr-44 lg:tracking-normal lg:text-[18px] lg:w-[88%] 2xl:w-[749px] lg:h-fit text-justify leading-[23.99px]"
           >
-            Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, ne
-            jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni demokratik që
-            vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, Hong
-            Kong dhe Sidnei që ofrojnë shërbime arkitekture, dizajni të brendshëm dhe urban nga
-            koncepti deri në përfundim.
+            Here, we showcase a curated selection of our most innovative and impactful work. 
+            Each project highlights our commitment to blending creativity with functionality, 
+            resulting in spaces that inspire and captivate. 
           </p>
           <Link to="/projects" onClick={() => window.scrollTo({ top: 0, left: 0 })}>
             <button

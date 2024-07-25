@@ -40,7 +40,7 @@ const SecondTeam = () => {
               <img 
                 src={member.imageUrl} 
                 alt={member.name} 
-                className='h-[35ch] w-full lg:h-screen object-cover'
+                className='h-[35ch] w-full lg:h-screen object-cover serviceImages'
               />
               <div className='lg:absolute lg:bottom-0 left-0 right-0 bg-[#0E0E0E] text-white p-8'>
                 <h3 className='text-2xl 2xl:text-[40px] font-custom font-[250]'>{member.name}</h3>

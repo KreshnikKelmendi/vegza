@@ -14,21 +14,21 @@ export interface ServiceData {
           {
             id: 1,
             title: 'INTERIOR',
-            description: 'Inter’s singular aim is to design the best buildings, places and spaces in the world. Inter’s singular aim is to design the best buildings, places and spaces in the world. A central part of this is providing the complete design of buildings across a range of sectors.',
+            description: 'We create interior spaces that are more than just functional – we make them feel like a true reflection of your style and personality. Our interior design services include space planning, material selection, and customized finishes to craft environments that are warm, comfortable, and refined.',
             image: service2, 
           },
 
           {
             id: 2,
             title: 'VISUALIZATIONS & ANIMATIONS',
-            description: 'Description for Specialty 2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            description: 'To bring your ideas to life before construction begins, we provide advanced visualizations and animations. These powerful tools help us create detailed and vivid representations of projects, allowing clients to see and experience their concepts in a clear and tangible form.',
             image: service1, 
           },
 
           {
             id: 3,
             title: 'ARCHITECTURE',
-            description: 'Description for Specialty 3. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            description: 'We approach architecture with a deep sense of aesthetics and functionality. From large-scale, sophisticated projects to smaller, personalized designs, we create plans that bring your vision to life and meet the needs and desires of our clients.',
             image: service3,
           },
     

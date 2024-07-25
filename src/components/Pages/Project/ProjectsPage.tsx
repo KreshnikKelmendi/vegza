@@ -31,7 +31,7 @@ const ProjectsPage: React.FC = () => {
           trigger: slider.current,
           pin: true,
           scrub: 1,
-          snap: 1 / (panels.length - 1),
+          snap: 0 / (panels.length - 1),
           end: () => "+=" + slider.current!.offsetWidth,
           markers: false
         }
@@ -58,10 +58,10 @@ const ProjectsPage: React.FC = () => {
         <div className="panel bg-[#0E0E0E]"><SecondDescriptionOfProjects /></div>
         <div className="panel bg-[#0E0E0E]"><SecondProjects /></div>
         <div className="panel bg-[#0E0E0E]"><ThirdProjects /></div>
-        <div className="panel bg-[#0E0E0E]"><FourthProjects /></div>
-        <div className="panel bg-[#0E0E0E]"><FifthProjects /></div>
+        {/* <div className="panel bg-[#0E0E0E]"><FourthProjects /></div> */}
+        {/* <div className="panel bg-[#0E0E0E]"><FifthProjects /></div>
         <div className="panel bg-[#0E0E0E]"><SixthProjects /></div>
-        <div className="panel bg-[#0E0E0E]"><SeventhProjects /></div>
+        <div className="panel bg-[#0E0E0E]"><SeventhProjects /></div> */}
         <div className="panel bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>

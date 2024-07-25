@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
           trigger: slider.current,
           pin: true,
           scrub: 1,
-          snap: 1 / (panels.length - 1),
+          snap: 0 / (panels.length - 1),
           end: () => "+=" + slider.current!.offsetWidth,
           markers: false
         }
@@ -54,10 +54,10 @@ const HomePage: React.FC = () => {
             </div>
         </div>
 
-        <div className="panel bg-[#0E0E0E]"><SecondPage /></div>
+        <div className="panel"><SecondPage /></div>
         <div className="panel "><ThirdPage /></div>
-        <div className="panel"><FourthPage /></div>
-        <div className="panel "><Services /></div>
+        <div className="panel border-none"><FourthPage /></div>
+        <div className="panel border-none"><Services /></div>
         <div className="panel bg-[#0E0E0E]"><OurSpecialization /></div>
         {/* <div className="panel bg-[#0E0E0E]"><Interior /></div> */}
         {/* <div className="panel bg-[#0E0E0E]"><VegzaViz /></div> */}
@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
 
     <div className="lg:hidden">
       <div className="flex flex-col lg:flex-row">
-        <div className="">
+        <div className="bg-[#0E0E0E]">
           <Header />
           {/* <div className="description panel bg-black"> */}
             <div>

@@ -58,12 +58,12 @@ const Interior = () => {
           <p className='w-full mt-6 text-justify font-custom text-[16px] 2xl:w-3/4'>
             Inter’s singular aim is to design the best buildings, places and spaces in the world. A central part of this is providing the complete design of buildings across a range of sectors.
           </p>
-          <button className='w-[204px] h-[42px] text-black border border-black hover:bg-black hover:text-white hover:duration-300 lg:mt-10 mt-8'>
+          {/* <button className='w-[204px] h-[42px] text-black border border-black hover:bg-black hover:text-white hover:duration-300 lg:mt-10 mt-8'>
             View Projects
-          </button>
+          </button> */}
         </div>
         <div className='lg:w-1/2'>
-        <img ref={imageRef1} className='w-full h-[50vh] object-cover' alt='' src={singleService.image} />
+          <img ref={imageRef1} className='w-full h-[50vh] object-cover' alt='' src={singleService.image} />
         </div>
       </div>
 
@@ -73,12 +73,12 @@ const Interior = () => {
           <p className='w-full mt-6 text-justify font-custom text-[16px] 2xl:w-3/4'>
             Inter’s singular aim is to design the best buildings, places and spaces in the world. A central part of this is providing the complete design of buildings across a range of sectors.
           </p>
-          <button className='w-[204px] h-[42px] text-black border border-black hover:bg-black hover:text-white hover:duration-300 lg:mt-10 mt-8'>
+          {/* <button className='w-[204px] h-[42px] text-black border border-black hover:bg-black hover:text-white hover:duration-300 lg:mt-10 mt-8'>
             View Projects
-          </button>
+          </button> */}
         </div>
         <div className='lg:w-1/2'>
-        <img ref={imageRef2} className='w-full h-[50vh] object-cover' alt='' src={singleService.image} />
+          <img ref={imageRef2} className='w-full h-[50vh] object-cover' alt='' src={singleService.image} />
         </div>
       </div>
       </>

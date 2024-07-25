@@ -57,8 +57,8 @@ export const ThirdPage = () => {
   };
 
   return (
-    <div className='w-full flex flex-col lg:flex-row font-custom'>
-      <div className='lg:w-1/2'>
+    <div className='w-full flex flex-col lg:flex-row font-custom 2xl:ml-[-550px]'>
+      <div className='lg:w-1/2 '>
         <Carousel
           additionalTransfrom={0}
           arrows={false}
@@ -90,7 +90,15 @@ export const ThirdPage = () => {
       <div className='lg:w-1/2 px-7 py-16 lg:px-0 w-fit bg-white lg:h-screen lg:pl-16 flex flex-col lg:items-start lg:justify-center' ref={textRefInView}>
         <p className='text-[30px] lg:text-[40px]'>About Us</p>
         <p className='text-[#050505] mt-6 lg:mt-8 font-custom text-sm 2xl:pr-44 lg:tracking-normal lg:text-[18px]  lg:w-[88%] 2xl:w-[749px] lg:h-fit text-justify leading-[23.99px]'>
-          Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, ne jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni demokratik që vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, Hong Kong dhe Sidnei që ofrojnë shërbime arkitekture, dizajni të brendshëm dhe urban nga koncepti deri në përfundim.
+        Vegza is an architecture studio dedicated to providing innovative and sustainable 
+        solutions for every project. With a team of passionate professionals, we blend 
+        creativity with technical expertise to create spaces that are both beautiful and 
+        functional. <br /> <br />
+        At Vegza, we are dedicated to delivering designs that go beyond mere functionality 
+        – we create spaces that resonate with the vision and needs of our clients. Each 
+        project we undertake is a reflection of our commitment to quality, creativity, and 
+        innovation. We approach every challenge with a fresh perspective and a deep sense
+        of aesthetics and efficiency.
         </p>
         <Link to="/about-us" onClick={() => window.scrollTo({ top: 0, left: 0 })}>
           <button className='w-full lg:w-[204px] h-[42px] text-black border font-custom border-black hover:bg-black hover:text-white hover:duration-300 mt-6 lg:mt-6 2xl:mt-10 text-sm lg:text-base font-semibold' ref={buttonRefInView}>

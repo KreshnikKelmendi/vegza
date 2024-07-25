@@ -31,11 +31,11 @@ const OurTeam = () => {
           Our Team
         </p>
         <p className='lg:w-[630px] text-justify tracking-tighter px-7 lg:px-10 2xl:pr-20 text-[#050505] text-base leading-[21.33px] font-[250]'>
-          Praktika të ndryshme të arkitekturës. E themeluar nga Robert Downey Jr në 2004, 
-          ne jemi një firmë në pronësi të punonjësve që ndjekim një proces dizajni demokratik 
-          që vlerëson kontributin e të gjithëve. Sot ne kemi më shumë se 150 njerëz në Londër, 
-          Hong Kong dhe Sidnei që ofrojnë shërbime arkitekture, dizajni të brendshëm dhe urban nga 
-          koncepti deri në përfundim.
+          Our team is composed of passionate professionals who bring a wealth of experience and a 
+          diverse set of skills to every project. Each member of our team is dedicated to excellence. 
+          We work collaboratively, combining our strengths to tackle complex challenges and deliver 
+          innovative solutions. Our diverse backgrounds and perspectives fuel our creativity and drive 
+          our commitment to pushing the boundaries of what is possible in architecture and design.
         </p>
         <div className='grid grid-cols-2 lg:grid-cols-2 py-16 px-5 lg:px-0 gap-2 lg:gap-2'>
           {teamMembers?.map(member => (
@@ -43,7 +43,7 @@ const OurTeam = () => {
               <img 
                 src={member.imageUrl} 
                 alt={member.name} 
-                className='h-[35ch] w-full lg:h-screen object-cover'
+                className='h-[35ch] w-full lg:h-screen object-cover serviceImages'
               />
               <div className='lg:absolute lg:bottom-0 left-0 right-0 bg-[#0E0E0E] text-white p-7'>
                 <h3 className='text-xl lg:text-2xl 2xl:text-[40px] font-custom font-[250] lg:py-3'>{member.name}</h3>

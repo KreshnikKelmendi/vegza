@@ -2,9 +2,16 @@ import React, { useRef, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
 import { services } from './Services/serviceData';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-
+// Utility function to truncate text to a specified word limit
+const truncateText = (text: string, wordLimit: number): string => {
+  const words = text.split(' ');
+  if (words.length <= wordLimit) {
+    return text;
+  }
+  return words.slice(0, wordLimit).join(' ') + '...';
+};
 
 const OurSpecialization: React.FC = () => {
   const { ref, inView } = useInView({
@@ -13,6 +20,7 @@ const OurSpecialization: React.FC = () => {
 
   const specialtiesRef = useRef<(HTMLDivElement | null)[]>([]);
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
     if (inView) {
@@ -23,7 +31,7 @@ const OurSpecialization: React.FC = () => {
           duration: 1,
           autoAlpha: 1,
           y: 0,
-          stagger: 0.3, // Adjust the stagger delay as per your preference
+          stagger: 0.3,
           ease: 'power3.out',
           onComplete: () => {
             // Optional: Add any additional onComplete logic if needed
@@ -34,11 +42,13 @@ const OurSpecialization: React.FC = () => {
   }, [inView]);
 
   return (
-    <div className='w-full flex flex-col lg:flex-row lg:items-center bg-layer lg:h-screen bg-white relative pb-5 lg:pb-0'>
-      <p className='vertical-text text-4xl py-10 font-light lg:py-0 px-7 lg:px-0 lg:text-[78px] font-custom text-black lg:leading-[73.45px] lg:absolute lg:left-[-60px]'>
-        Our <br /> Specialization
+    <div
+    className={`${location.pathname === '/services' ? 'w-full flex flex-col lg:flex-row lg:items-center bg-layer lg:h-screen bg-white relative pb-5 lg:pb-0': 'w-full flex flex-col lg:flex-row lg:items-center bg-layer lg:h-screen bg-white relative pb-5 lg:pb-0 2xl:ml-[-310px]'}`}
+>
+      <p className={`${location.pathname === '/services' ? 'vertical-text text-4xl py-10 font-light lg:py-0 px-7 lg:px-0 lg:text-[78px] 2xl:text-[78px] font-custom text-black lg:leading-[73.45px]': 'vertical-text text-4xl py-10 font-light lg:py-0 px-7 lg:px-0 lg:text-[78px] font-custom text-black lg:leading-[73.45px] lg:absolute lg:left-[-60px]'}`}>
+        Our Specialization
       </p>
-      <div ref={ref} className='grid lg:grid-cols-3 gap-10 lg:gap-24 lg:ml-32 lg:px-24'>
+      <div ref={ref} className='grid lg:grid-cols-3 gap-10 lg:gap-24 lg:ml-32 lg:px-4 2xl:px-24 2xl:mt-[-35px]'>
         {services.map((specialty, index) => (
           <div
             key={specialty.id}
@@ -47,52 +57,21 @@ const OurSpecialization: React.FC = () => {
             onMouseEnter={() => setHoverIndex(index)}
             onMouseLeave={() => setHoverIndex(null)}
           >
-            <div className='relative'>
+            <div className='relative  hover:scale-110 hover:duration-700 ease-out'>
               <img
                 src={specialty.image}
                 alt={`Img for ${specialty.title}`}
-                className='w-full h-64 2xl:h-[628px] object-cover'
+                className='w-full h-64 2xl:h-[500px] object-cover serviceImages'
                 style={{ position: 'relative' }} 
               />
-               <Link to={`/services/${specialty.id}`} onClick={() => window.scrollTo({ top: 0, left: 0 })}>
-              {hoverIndex === index && (
-                <div
-                  className="absolute inset-0 flex items-center justify-center"
-                  style={{
-                    position: 'absolute',
-                    top: '0',
-                    left: '0',
-                    right: '0',
-                    bottom: '0',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    zIndex: 10,
-                  }}
-                >
-                  <button
-                    className="text-white text-base font-bold font-custom  py-2 rounded-md transition-colors"
-                    onClick={() => {
-                      // Handle click action here
-                    }}
-                    style={{
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
-                      zIndex: 20,
-                    }}
-                  >
-                    See more
-                  </button>
-                </div>
-              )}
-              </Link>
+            
             </div>
-            <div className='px-7 py-7 lg:py-0 lg:px-0'>
-              <p className='2xl:mt-12 mt-4 text-2xl 2xl:text-[40px] uppercase font-light leading-[37.66px]'>
+            <div className='px-7 py-7 lg:py-0 lg:px-0 text-black'>
+              <p className='2xl:mt-12 mt-4 text-xl 2xl:text-[30px] uppercase font-light 2xl:leading-[37.66px] hover:mt-8 hover:duration-700 ease-out'>
                 {specialty.title}
               </p>
-              <p className='2xl:mt-12 mt-4 text-sm 2xl:text-base text-justify lg:text-base font-custom leading-[21.33px] font-light'>
-                {specialty.description}
+              <p className='2xl:mt-9 mt-4 text-sm 2xl:text-base text-justify lg:text-base font-custom leading-[21.33px] font-light tracking-tighter'>
+                {truncateText(specialty.description, 35)}
               </p>
             </div>
           </div>

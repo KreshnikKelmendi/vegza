@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import vegza1 from "../assets/vegza-1.png"
+// import vegza1 from "../assets/homeBanner.png"
 import SplitType from 'split-type'
 import gsap from 'gsap'
 import { useInView } from 'react-intersection-observer'
@@ -25,17 +25,17 @@ export const SecondPage = () => {
 
   return (
     <>
-    <div className='w-full flex flex-col lg:flex-row mt-[-110px] lg:mt-0 ' style={{ zIndex: 10 }} >
+    <div className='w-full flex flex-col lg:flex-row mt-[-110px] lg:mt-0 ' >
      
-      <div className='2xl:ml-[-160px]'>
+      {/* <div className='2xl:ml-[-160px] lg:ml-[-60px]'>
         <img src={vegza1} alt='' className='firstServiceImage 2xl:w-[320vh] h-80 lg:h-screen object-cover' />
-      </div>    
+      </div>     */}
       <div className='bg-white py-10 lg:h-screen w-full relative'>
-        <p ref={ref} className='text-black hidden font-light lg:block  font-custom text-2xl lg:text-[108px] 2xl:text-[108px] text-left absolute 2xl:top-44 2xl:pr-24 lg:right-0 2xl:right-4 lg:w-[1056px] lg:h-[594px] lg:leading-[110px]' id='my-text'>
-          The distinctive,<br />personal <br/>& cultivated, coalesce in a Vegza designed space
+        <p ref={ref} className='text-black hidden font-light lg:block  font-custom text-2xl lg:text-[98px] 2xl:text-[108px] text-left absolute lg:top-40 2xl:top-96 lg:left-16 2xl:left-44 lg:w-[1056px] lg:h-[594px] lg:leading-[95px] 2xl:leading-[110px]'>
+          "Every space has a story, we help you to tell it"
         </p>
-        <p className='text-black px-4 lg:hidden text-center font-custom text-3xl lg:text-[108px] lg:w-[1056px] lg:h-[594px] lg:leading-[110px]'>
-          The distinctive, personal & cultivated, coalesce in a Vegza designed space
+        <p className='text-black lg:hidden px-7 mx-auto font-custom text-3xl lg:text-[108px] lg:w-[1056px] lg:h-[594px] lg:leading-[110px]'>
+          Every space has a story,  we help you to tell it.
         </p>
       </div>
     </div>

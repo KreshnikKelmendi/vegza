@@ -22,7 +22,7 @@ const ServicesPage: React.FC = () => {
           trigger: slider.current,
           pin: true,
           scrub: 1,
-          snap: 1 / (panels.length - 1),
+          snap: 0 / (panels.length - 1),
           end: () => "+=" + slider.current!.offsetWidth,
           markers: false
         }
@@ -63,7 +63,7 @@ const ServicesPage: React.FC = () => {
         <div className=""></div>
       
         <div className=""></div>
-        <div className="bg-white"></div>
+        <div className="bg-[#0E0E0E]"><Contact /></div>
         <div className="bg-[#0E0E0E]"></div>
         <div className="bg-[#0E0E0E]"></div>
         <div className="bg-[#0E0E0E]"></div>

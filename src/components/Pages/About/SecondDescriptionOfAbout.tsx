@@ -31,18 +31,18 @@ const SecondDescriptionOfAbout = () => {
   }, [inView]);
 
   return (
-    <div className='flex flex-col lg:flex-row px-7 lg:px-0 lg:h-screen justify-center items-center py-10 2xl:ml-[-160px]'>
-      <div className='lg:w-1/2 '>
-        <img src={image12} alt='' className='firstServiceImage' />
+    <div className='flex flex-col lg:flex-row px-7 lg:px-0 lg:h-screen justify-center items-center py-10 '>
+      <div className='lg:w-1/2 lg:h-screen w-full'>
+        <img src={image12} alt='' className='' />
       </div>
       <p
         id='my-text'
         ref={ref}
-        className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 2xl:text-[128px] font-custom text-[#D9D9D9] lg:leading-[73.45px] lg:text-[78px] lg:absolute lg:left-[-60px]'
+        className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 2xl:text-[128px] font-custom text-white lg:leading-[73.45px] lg:text-[78px] lg:absolute lg:left-[-120px]'
       >
         Our Offices
       </p>
-      <div className="lg:bg-white lg:w-1/2">
+      <div className="lg:bg-white lg:w-1/2 lg:h-screen">
         <div className="w-full h-full">
           <img src={image13} alt="Image 1" className="w-full h-1/2 object-cover lg:pl-3 pb-2" />
           <img src={image14} alt="Image 2" className="w-full h-1/2 object-cover lg:pl-3 pt-2" />

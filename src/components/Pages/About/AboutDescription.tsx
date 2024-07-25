@@ -43,26 +43,24 @@ const AboutDescription = () => {
       </p>
       <div className='flex flex-col lg:flex-row mt-4 lg:mt-10 text-sm lg:text-[16px] font-custom font-light leading-[21.33px]'>
         <p
-          className='lg:w-[476px] text-justify'
+          className='lg:w-[476px] text-justify tracking-tighter'
           ref={(el) => (paragraphRefs.current[0] = el)}
         >
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
-          laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <br /> <br />Lorem ipsum dolor sit amet, 
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam 
-          erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis 
-          nisl ut aliquip ex ea commodo consequat.
+          At Vegza, we are dedicated to delivering designs that go beyond mere functionality – we create 
+          spaces that resonate with the vision and needs of our clients. Each project we undertake is a 
+          reflection of our commitment to quality, creativity, and innovation. We approach every challenge 
+          with a fresh perspective and a deep sense of aesthetics and efficiency.    
+          We prioritize sustainability and environmental responsibility in all our projects, ensuring that our designs contribute positively to the communities they serve.      
         </p>
         <p
           className='lg:w-[476px] hidden lg:block lg:mx-16 text-justify mt-6 lg:mt-0'
           ref={(el) => (paragraphRefs.current[1] = el)}
         >
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
-          laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <br /> <br /> Lorem ipsum dolor sit amet, 
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam 
-          erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis 
-          nisl ut aliquip ex ea commodo consequat.
+          Our design process is characterized by meticulous attention to detail and a commitment to quality.
+
+          We use the latest technology and innovative techniques to bring our designs to life, ensuring precision and excellence in every aspect of our work.
+          At Vegza, we envision a future where every space we create enhances lives, setting new standards in the architectural industry.
+
         </p>
       </div>
     </div>

@@ -1,11 +1,13 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import AboutVegzaViz from "./AboutVegzaVix";
-import SecondDescriptionOfVegzaViz from "./SecondDescriptionOfVegza";
+import AboutVegzaViz from "./AboutVegzaViz";
+// import SecondDescriptionOfVegzaViz from "./SecondDescriptionOfVegza";
 import Contact from "../Contact";
 import Header from "../../Header/Header";
-import VegzaVizProject from "./VegzaVizProject";
+// import VegzaVizProject from "./VegzaVizProject";
+import SecondProjects from "../Project/SecondProjects";
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -24,7 +26,7 @@ const AboutUsPage: React.FC = () => {
           trigger: slider.current,
           pin: true,
           scrub: 1,
-          snap: 1 / (panels.length - 1),
+          snap: 0 / (panels.length - 1),
           end: () => "+=" + slider.current!.offsetWidth,
           markers: false
         }
@@ -37,7 +39,7 @@ const AboutUsPage: React.FC = () => {
     <>
     <div className="hidden lg:block" ref={component}>
       <div ref={slider} className="w-fit flex flex-col lg:flex-row">
-        <div className="description panel bg-[#0E0E0E]">
+        <div className="description panel bg-[#A8FF00]">
           <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
@@ -48,15 +50,15 @@ const AboutUsPage: React.FC = () => {
             </div>
         </div>
 
-        <div className="panel bg-[#0E0E0E]"><SecondDescriptionOfVegzaViz /></div>
-        <div className="panel bg-[#0E0E0E]"><VegzaVizProject /></div>
+        {/* <div className="panel bg-[#0E0E0E]"><SecondDescriptionOfVegzaViz /></div> */}
+        <div className="panel bg-[#A8FF00]"><SecondProjects /></div>
         <div className="panel bg-[#0E0E0E]"><Contact /></div>
       </div>
     </div>
 
     <div className="lg:hidden">
       <div className="flex flex-col lg:flex-row">
-        <div className="">
+        <div className="bg-[#A8FF00]">
         <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
@@ -65,8 +67,8 @@ const AboutUsPage: React.FC = () => {
             </div>
         </div>
 
-        <div className=""><SecondDescriptionOfVegzaViz /></div>
-        <div className=""><VegzaVizProject /></div>
+        {/* <div className=""><SecondDescriptionOfVegzaViz /></div>
+        <div className=""><VegzaVizProject /></div> */}
 
         <div className=""><Contact /></div>
         <div className=""></div>

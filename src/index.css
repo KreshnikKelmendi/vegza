@@ -47,7 +47,7 @@ body {
   background: yellow;
 }
 .panel {
-  width: 96vw;
+  width: 100vw;
   /* width: 1740px; */
   height: 100vh;
 }
@@ -78,8 +78,8 @@ body {
 }
 
 .firstServiceImage {
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0.5%, #0e0e0e8e 55%);
-  mask-image: linear-gradient(to bottom, transparent 0.5%, #0e0e0e8e 55%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0.5%, #0e0e0e8e 30%);
+  mask-image: linear-gradient(to bottom, transparent 0.5%, #0e0e0e8e 30%);
 }
 @media (min-width: 1024px) {
   .firstServiceImage {
@@ -155,7 +155,7 @@ body {
 }
 .img {
   flex: 1;
-  height: 100vh;
+  
  
   cursor: pointer;
 
@@ -197,7 +197,31 @@ body {
   background-color: black;
 }
 .panelisima{
-  width: 125vw;
+  width: 130vw;
   /* width: 1740px; */
   height: 100vh;
 }
+
+.hamburger-menu {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.serviceImages{
+  filter: grayscale(100%);
+}
+.serviceImages:hover{
+  filter: grayscale(0);
+}
+

@@ -36,9 +36,9 @@ const SecondDescriptionOfProjects: React.FC = () => {
   const filteredProjects: ProjectData[] = projects.filter(project => [1, 2].includes(project.id));
 
   return (
-    <div className='flex flex-col lg:flex-row lg:h-screen justify-center items-center px-5 lg:px-0 py-10 lg:py-0 2xl:ml-[-180px]'>
+    <div className='flex flex-col lg:flex-row lg:h-screen justify-center items-center px-5 lg:px-0 py-10 lg:py-0'>
       <div className='lg:w-[200vh]'>
-        <img src={image18} alt='' className='firstServiceImage lg:h-screen' />
+        <img src={image18} alt='' className='lg:h-screen' />
       </div>
       <div className="lg:flex hidden gap-x-4 lg:bg-white lg:px-3 py-1 lg:py-0">
         {filteredProjects.map(project => (
