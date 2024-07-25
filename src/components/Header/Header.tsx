@@ -39,6 +39,7 @@ const closeIcon = (
 
 const LogoLink: React.FC<{ onHover: () => void; onLeave: () => void }> = ({ onHover, onLeave }) => {
   const [isHovering, setIsHovering] = useState(false);
+  const location = useLocation()
 
   return (
     <Link className='flex justify-center items-center font-custom '
@@ -53,8 +54,10 @@ const LogoLink: React.FC<{ onHover: () => void; onLeave: () => void }> = ({ onHo
       }}
       onClick={() => window.scrollTo({ top: 0, left: 0 })}
     >
+      
       <svg
-        className='w-[30px] h-[35px] lg:w-[57px] lg:h-[35px]'
+        className={`${location.pathname === '/vegza-viz' ? 'w-[30px] h-[35px] lg:w-[57px] lg:h-[35px] fill-black': 'w-[30px] h-[35px] lg:w-[57px] lg:h-[35px] fill-transparent'}`}
+
         viewBox="0 0 58 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -136,8 +139,6 @@ const Header: React.FC = () => {
        className={`lg:w-[100%] 2xl:w-[97%] relative px-7 w-full lg:px-[60px] py-4 lg:py-6 flex text-[16px] font-custom z-50 ${
         location.pathname === '/vegza-viz' ? 'bg-transparent z-50' : 'bg-gradient-to-r from-[#0a0a0a34] to-[#1011110e]'
       }`}
-      
-        
       >
         <div className="text-white flex md:items-center flex-grow">
           <LogoLink

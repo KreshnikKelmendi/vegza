@@ -46,7 +46,7 @@ const OurSpecialization: React.FC = () => {
     className={`${location.pathname === '/services' ? 'w-full flex flex-col lg:flex-row lg:items-center bg-layer lg:h-screen bg-white relative pb-5 lg:pb-0': 'w-full flex flex-col lg:flex-row lg:items-center bg-layer lg:h-screen bg-white relative pb-5 lg:pb-0 2xl:ml-[-310px]'}`}
 >
       <p className={`${location.pathname === '/services' ? 'vertical-text text-4xl py-10 font-light lg:py-0 px-7 lg:px-0 lg:text-[78px] 2xl:text-[78px] font-custom text-black lg:leading-[73.45px]': 'vertical-text text-4xl py-10 font-light lg:py-0 px-7 lg:px-0 lg:text-[78px] font-custom text-black lg:leading-[73.45px] lg:absolute lg:left-[-60px]'}`}>
-        Our Specialization
+        Where We Shine
       </p>
       <div ref={ref} className='grid lg:grid-cols-3 gap-10 lg:gap-24 lg:ml-32 lg:px-4 2xl:px-24 2xl:mt-[-35px]'>
         {services.map((specialty, index) => (
@@ -67,7 +67,7 @@ const OurSpecialization: React.FC = () => {
             
             </div>
             <div className='px-7 py-7 lg:py-0 lg:px-0 text-black'>
-              <p className='2xl:mt-12 mt-4 text-xl 2xl:text-[30px] uppercase font-light 2xl:leading-[37.66px] hover:mt-8 hover:duration-700 ease-out'>
+              <p className='2xl:mt-12 mt-4 text-xl 2xl:text-[20px] uppercase font-light 2xl:leading-[37.66px] hover:mt-8 hover:duration-700 ease-out'>
                 {specialty.title}
               </p>
               <p className='2xl:mt-9 mt-4 text-sm 2xl:text-base text-justify lg:text-base font-custom leading-[21.33px] font-light tracking-tighter'>

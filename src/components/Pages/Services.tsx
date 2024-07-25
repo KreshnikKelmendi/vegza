@@ -7,7 +7,6 @@ import 'react-multi-carousel/lib/styles.css';
 import vegza4 from "../assets/asset1.png"
 import vegza5 from "../assets/asset2.png"
 import vegza6 from "../assets/asset3.png"
-import video3 from "../assets/videoSlider.mp4"
 
 const images = [vegza1, vegza2, vegza3];
 
@@ -36,15 +35,63 @@ export const Services = () => {
   
   return (
     <div className='w-full lg:h-screen flex flex-col lg:flex-row font-custom'>
-      <div className='lg:w-1/2 hidden lg:block border border-[#E6E7E8] bg-[#E6E7E8] 2xl:ml-[-190px]' >
-      <video
-        src={video3}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className='w-full hidden lg:h-screen lg:block'
-      />
+      <div className='lg:w-1/2 hidden lg:block bg-[#E6E7E8] 2xl:ml-[-190px]' >
+      <Carousel
+          additionalTransfrom={0}
+          arrows={false}
+          autoPlay
+          autoPlaySpeed={2500}
+          centerMode={false}
+          className=''
+          containerClass='carousel-container'
+          dotListClass=''
+          draggable
+          focusOnSelect={false}
+          infinite
+          itemClass=''
+          keyBoardControl
+          minimumTouchDrag={80}
+          renderButtonGroupOutside={true}
+          renderDotsOutside={false}
+          responsive={carouselResponsiveConfig}
+          showDots={false}
+          sliderClass=''
+          slidesToSlide={1}
+          swipeable
+        >
+          {images.map((image, index) => (
+            <img key={index} src={image} alt={`Slide ${index}`} className='w-full h-80 lg:w-[3000px] lg:h-screen object-cover border-none' />
+          ))}
+        </Carousel>
+      </div>    
+      <div className='lg:w-1/2 block lg:hidden bg-black 2xl:ml-[-190px]' >
+      <Carousel
+          additionalTransfrom={0}
+          arrows={false}
+          autoPlay
+          autoPlaySpeed={2500}
+          centerMode={false}
+          className=''
+          containerClass='carousel-container'
+          dotListClass=''
+          draggable
+          focusOnSelect={false}
+          infinite
+          itemClass=''
+          keyBoardControl
+          minimumTouchDrag={80}
+          renderButtonGroupOutside={true}
+          renderDotsOutside={false}
+          responsive={carouselResponsiveConfig}
+          showDots={false}
+          sliderClass=''
+          slidesToSlide={1}
+          swipeable
+        >
+          {images1.map((image, index) => (
+            <img key={index} src={image} alt={`Slide ${index}`} className='w-full h-80 lg:w-[3000px] lg:h-screen object-cover border-none' />
+          ))}
+        </Carousel>
       </div> 
       <div className='px-7 lg:px-0 py-16 lg:py-0 w-full lg:w-1/2 bg-white lg:h-screen lg:pl-16 flex flex-col items-start justify-center'>
         <p className='text-3xl lg:text-[40px] font-light'>Services</p>

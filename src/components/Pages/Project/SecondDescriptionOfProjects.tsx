@@ -33,13 +33,13 @@ const SecondDescriptionOfProjects: React.FC = () => {
   }, [inView]);
 
   // Filtered projects based on specific IDs
-  const filteredProjects: ProjectData[] = projects.filter(project => [1, 2].includes(project.id));
+  const filteredProjects: ProjectData[] = projects.filter(project => [1, 2, 3].includes(project.id));
 
   return (
     <div className='flex flex-col lg:flex-row lg:h-screen justify-center items-center px-5 lg:px-0 py-10 lg:py-0'>
-      <div className='lg:w-[200vh]'>
+      {/* <div className='lg:w-[200vh]'>
         <img src={image18} alt='' className='lg:h-screen' />
-      </div>
+      </div> */}
       <div className="lg:flex hidden gap-x-4 lg:bg-white lg:px-3 py-1 lg:py-0">
         {filteredProjects.map(project => (
           <div key={project.id} className={`img img${project.id}`}>

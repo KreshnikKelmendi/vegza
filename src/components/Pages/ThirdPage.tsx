@@ -5,11 +5,14 @@ import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import image1 from '../assets/vegza-2.png';
-import image2 from '../assets/vegza-3.png';
-import image3 from '../assets/vegza-4.png';
+import image2 from "../assets/interior99.png"
+import image3 from "../assets/interior98.png"
+import image4 from "../assets/interior97.png"
+// import image2 from '../assets/vegza-3.png';
+// import image3 from '../assets/vegza-4.png';
 
 // Array of imported images
-const images = [image1, image2, image3];
+const images = [image1, image2, image3, image4];
 
 export const ThirdPage = () => {
   const textRef = useRef(null);
@@ -63,7 +66,7 @@ export const ThirdPage = () => {
           additionalTransfrom={0}
           arrows={false}
           autoPlay
-          autoPlaySpeed={3000}
+          autoPlaySpeed={2500}
           centerMode={false}
           className=''
           containerClass='carousel-container'
