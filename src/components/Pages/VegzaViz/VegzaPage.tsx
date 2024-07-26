@@ -7,6 +7,7 @@ import Contact from "../Contact";
 import Header from "../../Header/Header";
 // import VegzaVizProject from "./VegzaVizProject";
 import ProjectsVegzaViz from "./ProjectsVegzaViz";
+import MobileVegzaVizProjects from "./MobileVegzaVizProjects";
 
 
 
@@ -62,16 +63,14 @@ const AboutUsPage: React.FC = () => {
         <Header />
           {/* <div className="description panel bg-black"> */}
             <div>
-            <AboutVegzaViz />
-             
+              <AboutVegzaViz />
             </div>
         </div>
 
         {/* <div className=""><SecondDescriptionOfVegzaViz /></div>
         <div className=""><VegzaVizProject /></div> */}
-
+        <div className=""><MobileVegzaVizProjects /></div>
         <div className=""><Contact /></div>
-        <div className=""></div>
         <div className="bg-white"></div>
         <div className="bg-[#0E0E0E]"></div>
         <div className="bg-[#0E0E0E]"></div>

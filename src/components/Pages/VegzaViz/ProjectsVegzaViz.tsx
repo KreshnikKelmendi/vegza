@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
-import { ProjectData, projects } from '../Project/projectData';
+import { VizProjectData, vizProjects } from './VegzaVizProjects';
 
 const ProjectsVegzaViz: React.FC = () => {
-  const filteredProjects: ProjectData[] = projects.filter(project => [3, 4, 5].includes(project.id));
+  const filteredProjects: VizProjectData[] = vizProjects.filter(project => [1, 2, 3].includes(project.id));
   const location = useLocation()
 
   // Scroll restoration logic
@@ -31,18 +31,13 @@ const ProjectsVegzaViz: React.FC = () => {
   };
 
   return (
-    <div className="main_box grid lg:grid-cols-3 py-14 lg:py-0 gap-y-14 lg:gap-y-0 lg:gap-4 bg-black lg:bg-[#A8FF00] lg:px-4 px-4">
-         <p
-                id='my-text'
-                className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 2xl:text-[128px] font-custom text-black lg:leading-[73.45px] lg:text-[78px] lg:absolute lg:bottom-44 lg:left-[-135px]'
-            >
+    <div className="main_box grid lg:grid-cols-3 py-14 lg:py-0 gap-y-14 lg:gap-y-0 lg:gap-4 bg-black lg:bg-[#A8FF00] lg:px-0 px-4">
+         <p id='my-text' className='vertical-text text-4xl py-10 font-light lg:py-0 px-4 lg:px-0 2xl:text-[128px] font-custom text-black lg:leading-[73.45px] lg:text-[78px] lg:absolute lg:bottom-44 lg:left-[-135px]'>
                 Our Work
-            </p>
+         </p>
       {filteredProjects.map(project => (
-        
         <div key={project.id} className={`img img${project.id}`}>
-    
-          <Link key={project.id} to={`/projects/${project.id}`} onClick={handleClick}>
+          <Link key={project.id} to={`/vegza-viz/${project.id}`} onClick={handleClick}>
           <div className="bg-black lg:bg-white lg:py-0 px-4 lg:px-0 relative group">
             <img src={project.cover} alt={project.name} className="w-full h-80 lg:h-screen object-cover " />
             <div className='absolute lg:h-[229px] 2xl:h-[319px] flex flex-col justify-center px-5 lg:px-16 bottom-0 w-full bg-gradient-to-t from-[#0a0a0a] to-[#1011110e]'>

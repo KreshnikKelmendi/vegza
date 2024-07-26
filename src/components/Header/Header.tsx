@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, useParams } from 'react-router-dom';
 import vegzaProva from "../assets/vegzaProva.png"
 import LogoHover from './LogoHover';
 
@@ -83,6 +83,7 @@ const Header: React.FC = () => {
   const [isFixed, setFixed] = useState(false);
   const menuRef = useRef(null);
   const location = useLocation();
+  const { projectId } = useParams();
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -136,9 +137,13 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-       className={`lg:w-[100%] 2xl:w-[97%] relative px-7 w-full lg:px-[60px] py-4 lg:py-6 flex text-[16px] font-custom z-50 ${
-        location.pathname === '/vegza-viz' ? 'bg-transparent z-50' : 'bg-gradient-to-r from-[#0a0a0a34] to-[#1011110e]'
-      }`}
+        className={`lg:w-[100%] 2xl:w-[100%] relative px-7 w-full lg:px-[60px] py-4 lg:py-6 flex text-[16px] font-custom z-50 ${
+          location.pathname === '/vegza-viz'
+            ? 'bg-transparent z-50'
+            : location.pathname === `/vegza-viz/${projectId}`
+            ? 'bg-[#A8FF00]'
+            : 'bg-gradient-to-r from-[#0a0a0a34] to-[#1011110e]'
+        }`}
       >
         <div className="text-white flex md:items-center flex-grow">
           <LogoLink
@@ -172,42 +177,43 @@ const Header: React.FC = () => {
             <NavLink
               to="/"
               onClick={closeMenu}
-              className="text-white text-[32px] py-[18px] mt-[-105px]"
+              className={`${location.pathname === '/vegza-viz' ? 'text-black text-[32px] py-[18px] font-bold': 'text-white text-[32px] py-[18px]'}`}
             >
               Home
             </NavLink>
             <NavLink
               to="/about-us"
               onClick={closeMenu}
-              className="text-white text-[32px] py-[18px]"
+              className={`${location.pathname === '/vegza-viz' ? 'text-black text-[32px] py-[18px] font-bold': 'text-white text-[32px] py-[18px]'}`}
             >
               About Us
             </NavLink>
             <NavLink
               to="/projects"
               onClick={closeMenu}
-              className="text-white text-[32px] py-[18px]"
+              className={`${location.pathname === '/vegza-viz' ? 'text-black text-[32px] py-[18px] font-bold': 'text-white text-[32px] py-[18px]'}`}
             >
               Projects
             </NavLink>
             <NavLink
               to="/services"
               onClick={closeMenu}
-              className="text-white text-[32px] py-[18px]"
+              className={`${location.pathname === '/vegza-viz' ? 'text-black text-[32px] py-[18px] font-bold': 'text-white text-[32px] py-[18px]'}`}
             >
               Services
             </NavLink>
             <NavLink
               to="/contact"
               onClick={closeMenu}
-              className="text-white text-[32px] py-[18px]"
+              className={`${location.pathname === '/vegza-viz' ? 'text-black text-[32px] py-[18px] font-bold': 'text-white text-[32px] py-[18px]'}`}
             >
               Contact
             </NavLink>
             <NavLink
               to="/vegza-viz"
               onClick={closeMenu}
-              className="text-black font-bold w-fit px-8 bg-[#A8FF00] hover:text-black mt-[18px] py-[8px] text-[32px] z-50"
+              className={`${location.pathname === '/vegza-viz' ? 'hidden': 'text-black font-bold w-fit px-8 bg-[#A8FF00] hover:text-black mt-[18px] py-[8px] text-[32px] z-50'}`}
+
             >
               Vegza Viz
             </NavLink>
@@ -217,37 +223,37 @@ const Header: React.FC = () => {
         <div className="hidden lg:flex space-x-16 font-custom uppercase">
           <NavLink
             to="/" onClick={() => window.scrollTo({ top: 0, left: 0 })}
-            className={`${location.pathname === '/vegza-viz' ? 'text-black text-[16px] font-bold flex items-center justify-center': 'text-white text-[16px] flex items-center justify-center'}`}
+            className={`${location.pathname === '/vegza-viz' ? 'text-black text-[16px] font-bold flex items-center justify-center hover:scale-110 hover:font-extrabold hover:duration-500 ease': 'text-white text-[16px] flex items-center justify-center hover:scale-110 hover:font-extrabold hover:duration-500 ease'}`}
           >
             Home
           </NavLink>
           <NavLink
             to="/about-us" onClick={() => window.scrollTo({ top: 0, left: 0 })}
-            className={`${location.pathname === '/vegza-viz' ? 'text-black text-[16px] font-bold flex items-center justify-center': 'text-white text-[16px] flex items-center justify-center'}`}
+            className={`${location.pathname === '/vegza-viz' ? 'text-black text-[16px] font-bold flex items-center justify-center hover:scale-110 hover:font-extrabold hover:duration-500 ease': 'text-white text-[16px] flex items-center justify-center hover:scale-110 hover:font-extrabold hover:duration-500 ease'}`}
           >
             About Us
           </NavLink>
           <NavLink
             to="/projects" onClick={() => window.scrollTo({ top: 0, left: 0 })}
-            className={`${location.pathname === '/vegza-viz' ? 'text-black text-[16px] font-bold flex items-center justify-center': 'text-white text-[16px] flex items-center justify-center'}`}
+            className={`${location.pathname === '/vegza-viz' ? 'text-black text-[16px] font-bold flex items-center justify-center hover:scale-110 hover:font-extrabold hover:duration-500 ease': 'text-white text-[16px] flex items-center justify-center hover:scale-110 hover:font-extrabold hover:duration-500 ease'}`}
           >
             Projects
           </NavLink>
           <NavLink
             to="/services" onClick={() => window.scrollTo({ top: 0, left: 0 })}
-            className={`${location.pathname === '/vegza-viz' ? 'text-black text-[16px] font-bold flex items-center justify-center': 'text-white text-[16px] flex items-center justify-center'}`}
+            className={`${location.pathname === '/vegza-viz' ? 'text-black text-[16px] font-bold flex items-center justify-center hover:scale-110 hover:font-extrabold hover:duration-500 ease': 'text-white text-[16px] flex items-center justify-center hover:scale-110 hover:font-extrabold hover:duration-500 ease'}`}
           >
             Services
           </NavLink>
           <NavLink
             to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0 })}
-            className={`${location.pathname === '/vegza-viz' ? 'text-black text-[16px] font-bold flex items-center justify-center': 'text-white text-[16px] flex items-center justify-center'}`}
+            className={`${location.pathname === '/vegza-viz' ? 'text-black text-[16px] font-bold flex items-center justify-center hover:scale-110 hover:font-extrabold hover:duration-500 ease': 'text-white text-[16px] flex items-center justify-center hover:scale-110 hover:font-extrabold hover:duration-500 ease'}`}
           >
             Contact
           </NavLink>
           <NavLink
             to="/vegza-viz" onClick={() => window.scrollTo({ top: 0, left: 0 })}
-            className={`${location.pathname === '/vegza-viz' ? 'text-black hidden bg-[#A8FF00] hover:text-black px-6 py-2 text-[16px] items-center justify-center': 'text-black font-bold bg-[#A8FF00] hover:text-black px-6 py-2 text-[16px] flex items-center justify-center'}`}
+            className={`${location.pathname === '/vegza-viz' ? 'text-black hidden bg-[#A8FF00] hover:text-black px-6 py-2 text-[16px] items-center justify-center': 'text-black font-bold bg-[#A8FF00] hover:font-extrabold hover:scale-110 hover:duration-500 ease hover:text-black px-6 py-2 text-[16px] flex items-center justify-center'}`}
 
           >
             Vegza Viz

@@ -10,6 +10,7 @@ import ScrollToTop from './components/Pages/Contact/ScrollToTop';
 import SinglePageOfProject from './components/Pages/Project/SinglePageOfProject';
 import ServicesPage from './components/Pages/Services/ServicesPage';
 import Interior from './components/Pages/Interior';
+import SinglePageOfVizProjects from './components/Pages/VegzaViz/SinglePageOfVizProjects';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/vegza-viz" element={<VegzaPage />} />
+            <Route path="/vegza-viz/:projectId" element={<SinglePageOfVizProjects />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/:projectId" element={<SinglePageOfProject />} />
             <Route path="/services/:serviceId" element={<Interior />} />

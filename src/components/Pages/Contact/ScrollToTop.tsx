@@ -84,12 +84,12 @@ const ScrollToTopArrow: React.FC = () => {
         style={{ opacity: 0, display: 'none' }}
       >
         <ul className='font-custom'>
-          <li><NavLink to="/" onClick={closeMenuAndScrollToTop} className="block p-2">HOME</NavLink></li>
-          <li><NavLink to="/about-us" onClick={closeMenuAndScrollToTop} className="block p-2">ABOUT US</NavLink></li>
-          <li><NavLink to="/projects" onClick={closeMenuAndScrollToTop} className="block p-2">PROJECTS</NavLink></li>
-          <li><NavLink to="/services" onClick={closeMenuAndScrollToTop} className="block p-2">SERVICES</NavLink></li>
-          <li><NavLink to="/contact" onClick={closeMenuAndScrollToTop} className="block p-2">CONTACT</NavLink></li>
-          <li><NavLink to="/vegza-viz" onClick={closeMenuAndScrollToTop} className="block p-2">VEGZA VIZ</NavLink></li>
+          <li><NavLink to="/" onClick={closeMenuAndScrollToTop} className="block p-2 hover:scale-110 hover:font-extrabold hover:duration-500 ease">HOME</NavLink></li>
+          <li><NavLink to="/about-us" onClick={closeMenuAndScrollToTop} className="block p-2 hover:scale-110 hover:font-extrabold hover:duration-500 ease">ABOUT US</NavLink></li>
+          <li><NavLink to="/projects" onClick={closeMenuAndScrollToTop} className="block p-2 hover:scale-110 hover:font-extrabold hover:duration-500 ease">PROJECTS</NavLink></li>
+          <li><NavLink to="/services" onClick={closeMenuAndScrollToTop} className="block p-2 hover:scale-110 hover:font-extrabold hover:duration-500 ease">SERVICES</NavLink></li>
+          <li><NavLink to="/contact" onClick={closeMenuAndScrollToTop} className="block p-2 hover:scale-110 hover:font-extrabold hover:duration-500 ease">CONTACT</NavLink></li>
+          <li><NavLink to="/vegza-viz" onClick={closeMenuAndScrollToTop} className="block p-2 hover:scale-110 hover:font-extrabold hover:duration-500 ease">VEGZA VIZ</NavLink></li>
         </ul>
       </div>
     </div>
