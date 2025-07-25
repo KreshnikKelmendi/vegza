@@ -5,10 +5,14 @@ import gsap from 'gsap';
 import image12 from "../../assets/DSC04585-2.jpg";
 import image13 from "../../assets/DSC04653.jpg";
 import image14 from "../../assets/DSC04717.jpg";
+import image15 from "../../assets/DSC04656.jpg";
+import image16 from "../../assets/DSC04606-2.jpg";
+import image17 from "../../assets/DSC04583.jpg";
+
 
 const leftImages = [image12, image13, image14];
-const rightTopImages = [image13, image14, image12];
-const rightBottomImages = [image14, image12, image13];
+const rightTopImages = [image13, image15, image16];
+const rightBottomImages = [image17, image12, image13];
 
 const TRANSITION_DURATION = 600; // ms
 
