@@ -66,8 +66,9 @@ const Contact = () => {
                 className='w-full h-96 lg:h-screen '
                 id="gmap_canvas"
                 title="Location of Vegza"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.045531673183!2d21.14689637501742!3d42.660390516076355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549f017ca6a309%3A0x272afdb51c6b65bc!2sTrekuartista!5e0!3m2!1sen!2s!4v1699412011049!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.0568238729006!2d21.147532476641864!3d42.660151216089055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549efa588c3d05%3A0xb0cffadb89800d29!2sRruga%20Vicianum%2C%20Prishtina%2010000!5e0!3m2!1sen!2s!4v1753090722247!5m2!1sen!2s"
                 style={{ filter: 'grayscale(350%)' }}
+                
             >
             </iframe>
         </div>

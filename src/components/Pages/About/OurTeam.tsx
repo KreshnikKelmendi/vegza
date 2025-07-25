@@ -1,19 +1,18 @@
 import React from 'react'
-import member1 from "../../assets/member1.png"
-import member2 from "../../assets/member45.png"
-import member3 from "../../assets/emmarad.png"
+import member1 from "../../assets/DSC04207.jpg"
+import member2 from "../../assets/DSC04831.jpg"
 
 const teamMembers = [
   {
     id: 1,
-    name: 'John Doe',
-    role: 'Architect',
+    name: 'Milot Sulejmani',
+    role: 'CEO & Founder',
     imageUrl: member1
   },
   {
     id: 2,
-    name: 'Jane Smith',
-    role: 'Designer',
+    name: 'Donat Kajtazi',
+    role: 'Architect',
     imageUrl: member2
   },
  
@@ -22,7 +21,7 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
-    <div className='lg:h-screen bg-white'>
+    <div className='hidden lg:block lg:h-screen bg-white'>
       <div className='flex flex-col lg:flex-row lg:items-center lg:h-screen font-custom'>
         <p
           id='my-text'

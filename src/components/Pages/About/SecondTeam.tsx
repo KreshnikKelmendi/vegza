@@ -1,12 +1,13 @@
 import React from 'react'
-import member4 from "../../assets/member45.png"
-import member5 from "../../assets/member46.png"
-import member6 from "../../assets/member47.png"
+import member4 from "../../assets/DSC04260.jpg"
+import member5 from "../../assets/DSC04380.jpg"
+import member6 from "../../assets/DSC04438.jpg"
+import member7 from "../../assets/DSC04502.jpg"
 
 const teamMembers = [
   {
     id: 1,
-    name: 'Roger Federer',
+    name: 'Alison Smith',
     role: 'Architect',
     imageUrl: member4
   },
@@ -20,14 +21,15 @@ const teamMembers = [
     id: 3,
     name: 'Alice Johnson',
     role: 'Urban Planner',
-    imageUrl: member4
+    imageUrl: member6
   },
   {
     id: 4,
     name: 'Alice Johnson',
     role: 'Urban Planner',
-    imageUrl: member6
+    imageUrl: member7
   },
+ 
 ]
 
 const SecondTeam = () => {

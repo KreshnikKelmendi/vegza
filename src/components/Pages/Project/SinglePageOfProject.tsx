@@ -36,35 +36,36 @@ const SinglePageOfProject: React.FC = () => {
 
   return (
     <>
-    <div className="hidden lg:block" ref={component}>
-      <div ref={slider} className="w-fit flex flex-col lg:flex-row">
-        <div className="panelisima bg-white">
-          {/* <div className="description panel bg-black"> */}
-            <div>
-              <SingleWork />
-              <div className="scroll-down">
-                <div className="arrow"></div>
+    <div className="bg-[#0E0E0E] min-h-screen">
+      <div className="hidden lg:block" ref={component}>
+        <div ref={slider} className="w-fit flex flex-col lg:flex-row">
+          <div className="panelisima bg-white">
+            {/* <div className="description panel bg-black"> */}
+              <div>
+                <SingleWork />
+                <div className="scroll-down">
+                  <div className="arrow"></div>
+                </div>
               </div>
-            </div>
-        </div>
+          </div>
 
-      
-        <div className="panelisima bg-[#0E0E0E]"><Contact /></div>
-      </div>
-    </div>
-
-    <div className="lg:hidden">
-      <div className="flex flex-col lg:flex-row">
-        <div className="">
-          {/* <div className="description panel bg-black"> */}
-            <div className="bg-white">
-            <SingleWork /> 
-            </div>
-            <div className=" bg-[#0E0E0E]"><Contact /></div>
+        
+          <div className="panelisima bg-[#0E0E0E]"><Contact /></div>
         </div>
       </div>
-    </div>
 
+      <div className="lg:hidden">
+        <div className="flex flex-col lg:flex-row">
+          <div className="">
+            {/* <div className="description panel bg-black"> */}
+              <div className="bg-white">
+              <SingleWork /> 
+              </div>
+              <div className=" bg-[#0E0E0E]"><Contact /></div>
+          </div>
+        </div>
+      </div>
+    </div>
     </>
   );
 }

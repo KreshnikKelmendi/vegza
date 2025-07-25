@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 import video1 from '../assets/video1.mp4';
 import video2 from "../assets/mobileVideo1.mp4"
 import { Link } from 'react-router-dom';
 
 const FirstPage: React.FC = () => {
+  const headingRef = useRef<HTMLParagraphElement>(null);
+  const headingText = 'Transforming Visions into Architectural Masterpieces.';
+  const words = headingText.split(' ');
+
+  useEffect(() => {
+    if (headingRef.current) {
+      gsap.fromTo(
+        headingRef.current.children,
+        {
+          y: 60,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: 'power3.out',
+          stagger: 0.13,
+        }
+      );
+    }
+  }, []);
   
   return (
     <div className='relative h-screen lg:h-fit lg:py-0 bg-[#0E0E0E] '>
@@ -25,8 +48,20 @@ const FirstPage: React.FC = () => {
       />
       <div className='absolute top-0 lg:top-8 2xl:top-0'>
         <div className='flex px-7 flex-col lg:flex-row lg:px-[144px] justify-center items-center lg:items-baseline lg:justify-between 2xl:items-center h-screen'>
-          <p className='text-white mt-16 lg:mt-24 2xl:mt-0 text-left uppercase text-xl lg:text-[70px] 2xl:text-[100px] lg:leading-[70px] 2xl:leading-[125.3px] font-thin 2xl:w-[1065px] font-custom '>
-          Transforming Visions into Architectural Masterpieces.
+          <p
+            ref={headingRef}
+            className='text-white mt-16 lg:mt-24 2xl:mt-0 text-left uppercase text-xl lg:text-[70px] 2xl:text-[100px] lg:leading-[70px] 2xl:leading-[125.3px] font-thin 2xl:w-[1065px] font-custom flex flex-wrap gap-x-2'
+            style={{ overflow: 'hidden' }}
+          >
+            {words.map((word, i) => (
+              <span
+                key={i}
+                style={{ display: 'inline-block', opacity: 0, transform: 'translateY(60px)' }}
+                className='will-change-transform'
+              >
+                {word}
+              </span>
+            ))}
           </p>
           <div className='flex flex-col lg:justify-center 2xl:justify-start 2xl:mt-0 mt-6 lg:ml-16'>
             <button className='text-white hidden lg:block text-4xl 2xl:text-5xl lg:pl-[300px] 2xl:pl-[350px]'>{'>'}</button>

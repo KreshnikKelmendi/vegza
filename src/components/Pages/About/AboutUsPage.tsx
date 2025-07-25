@@ -7,6 +7,7 @@ import OurTeam from "./OurTeam";
 import SecondTeam from "./SecondTeam";
 import Contact from "../Contact";
 import Header from "../../Header/Header";
+import MobileTeam from "./MobileTeam";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -67,7 +68,8 @@ const AboutUsPage: React.FC = () => {
         </div>
 
         <div className=""><SecondDescriptionOfAbout /></div>
-        <div className=""><OurTeam /></div>
+        <div className="hidden lg:block"><OurTeam /></div>
+        <div className="block lg:hidden"><MobileTeam /></div>
         <div className=""><Contact /></div>
         <div className="bg-white"></div>
         <div className="bg-[#0E0E0E]"></div>
