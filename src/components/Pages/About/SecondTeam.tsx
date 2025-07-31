@@ -6,27 +6,27 @@ import member7 from "../../assets/DSC04502.jpg"
 
 const teamMembers = [
   {
-    id: 1,
-    name: 'Alison Smith',
-    role: 'Architect',
+    id: 4,
+    name: 'Bleona Hyseni',
+    role: 'Senior Interior Designer',
     imageUrl: member4
   },
   {
-    id: 2,
-    name: 'Rafael Nadal',
-    role: 'Interior Designer',
+    id: 5,
+    name: 'Donjeta Gashi',
+    role: 'Junior Architect',
     imageUrl: member5
   },
   {
-    id: 3,
-    name: 'Alice Johnson',
-    role: 'Urban Planner',
+    id: 6,
+    name: 'Velsa Bakolli',
+    role: 'Junior Interior Designer',
     imageUrl: member6
   },
   {
-    id: 4,
-    name: 'Alice Johnson',
-    role: 'Urban Planner',
+    id: 7,
+    name: 'Ardita Pnishi',
+    role: 'Intern Architect',
     imageUrl: member7
   },
  

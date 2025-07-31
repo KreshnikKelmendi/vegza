@@ -10,37 +10,37 @@ const teamMembers = [
   {
     id: 1,
     name: 'Milot Sulejmani',
-    role: 'CEO & Founder',
+    role: 'Founder, CEO, Head of Design, Interior Designer',
     imageUrl: member1
   },
   {
     id: 2,
-    name: 'Donat Kajtazi',
-    role: 'Architect',
+    name: 'Donat Minci',
+    role: 'Senior Architect',
     imageUrl: member2
   },
   {
     id: 4,
-    name: 'Alice Johnson',
-    role: 'Urban Planner',
+    name: 'Bleona Hyseni',
+    role: 'Senior Interior Designer',
     imageUrl: member4
   },
   {
     id: 5,
-    name: 'Alice Johnson',
-    role: 'Urban Planner',
+    name: 'Donjeta Gashi',
+    role: 'Junior Architect',
     imageUrl: member5
   },
   {
     id: 6,
-    name: 'Alice Johnson',
-    role: 'Urban Planner',
+    name: 'Velsa Bakolli',
+    role: 'Junior Interior Designer',
     imageUrl: member6
   },
   {
     id: 7,
-    name: 'Alice Johnson',
-    role: 'Urban Planner',
+    name: 'Ardita Pnishi',
+    role: 'Intern Architect',
     imageUrl: member7
   },
 

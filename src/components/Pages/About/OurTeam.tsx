@@ -11,8 +11,8 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: 'Donat Kajtazi',
-    role: 'Architect',
+    name: 'Donat Minci',
+    role: 'Senior Architect',
     imageUrl: member2
   },
  
