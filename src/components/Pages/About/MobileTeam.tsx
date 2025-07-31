@@ -76,7 +76,7 @@ const MobileTeam = () => {
                 <img
                   src={member.imageUrl}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
                   style={{ height: "100%" }}
                 />
               </div>
